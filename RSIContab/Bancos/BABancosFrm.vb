@@ -10,11 +10,16 @@
 
     Private Sub BABancosFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BABancosListaDataSet.BAConf' Puede moverla o quitarla según sea necesario.
-        Me.BAConfTableAdapter.Fill(Me.BABancosListaDataSet.BAConf)
+        Me.MdiParent = MDIPrincipal
         Me.Top = 10
+        Me.Left = 10
+
         dbCls.DBconStr = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
+        Me.BAConfTableAdapter.Connection.ConnectionString = strcnCAD
+        Me.BAConfTableAdapter.Fill(Me.BABancosListaDataSet.BAConf)
         Me.BABancosTableAdapter.Fill(Me.BABancosListaDataSet.BABancos)
+
         ListaDataNavBarPrin.ToolStripLabelBuscar.Text = "Buscar Directamente por Identidad:"
         ListaDataNavBarPrin.ToolStripLabelBuscar.Text = ""
         ListaDataNavBarPrin.ToolStripLabelNoRegistros.Text = PrincipalBindingSource.Count
