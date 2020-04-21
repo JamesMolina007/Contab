@@ -407,14 +407,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5368320">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5379072">
       <assemblyIdentity name="RSIContab" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0xE5VJbGfPCdn8IKEzH3Sy7WizQ=</dsig:DigestValue>
+        <dsig:DigestValue>3e1cDFiR9YT49iDEw4t8b+Z4TtE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
