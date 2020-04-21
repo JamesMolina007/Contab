@@ -9,6 +9,8 @@
     End Sub
 
     Private Sub BABancosFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BABancosListaDataSet.BAConf' Puede moverla o quitarla según sea necesario.
+        Me.BAConfTableAdapter.Fill(Me.BABancosListaDataSet.BAConf)
         Me.Top = 10
         dbCls.DBconStr = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
