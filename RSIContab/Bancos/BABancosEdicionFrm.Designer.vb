@@ -32,6 +32,8 @@ Partial Class BABancosEdicionFrm
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.C1NumericEditUltimoDeposito = New C1.Win.C1Input.C1NumericEdit()
+        Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BABancosEdicionDataSet = New RSIContab.BABancosEdicionDataSet()
         Me.C1NumericEditUltimoCheque = New C1.Win.C1Input.C1NumericEdit()
         Me.C1NumericEditUltimaNotaDebito = New C1.Win.C1Input.C1NumericEdit()
         Me.C1NumericEditUltimaNotaCredito = New C1.Win.C1Input.C1NumericEdit()
@@ -42,7 +44,9 @@ Partial Class BABancosEdicionFrm
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.C1NumericEditCuentaContable = New C1.Win.C1Input.C1NumericEdit()
+        Me.C1TextBoxCuentaAjuste = New C1.Win.C1Input.C1TextBox()
+        Me.LabelCuentaAjuste = New System.Windows.Forms.Label()
+        Me.C1ButtonCuentaAjuste = New C1.Win.C1Input.C1Button()
         Me.C1NumericEditFactorCambio = New C1.Win.C1Input.C1NumericEdit()
         Me.C1CheckBoxCuentaExtranjera = New C1.Win.C1Input.C1CheckBox()
         Me.C1ComboBoxMoneda = New C1.Win.C1Input.C1ComboBox()
@@ -69,9 +73,11 @@ Partial Class BABancosEdicionFrm
         Me.Label16 = New System.Windows.Forms.Label()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.C1TrueDBGrid1 = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
+        Me.BATransEncBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.C1NumericEditActual = New C1.Win.C1Input.C1NumericEdit()
         Me.C1NumericEditCreditos = New C1.Win.C1Input.C1NumericEdit()
+        Me.BindingSourceSaldos = New System.Windows.Forms.BindingSource(Me.components)
         Me.C1NumericEditDebitos = New C1.Win.C1Input.C1NumericEdit()
         Me.C1NumericEditDepositos = New C1.Win.C1Input.C1NumericEdit()
         Me.C1NumericEditCheques = New C1.Win.C1Input.C1NumericEdit()
@@ -90,26 +96,24 @@ Partial Class BABancosEdicionFrm
         Me.Label33 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.EditDataNavBarPrin = New RSIContab.EditDataNavBar()
-        Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BABancosEdicionDataSet = New RSIContab.BABancosEdicionDataSet()
-        Me.BATransEncBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BABancosEdicionDataSet1 = New RSIContab.BABancosEdicionDataSet()
-        Me.BATransDetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BABancosTableAdapter = New RSIContab.BABancosEdicionDataSetTableAdapters.BABancosTableAdapter()
-        Me.BATransaccionesDetalleTableAdapter = New RSIContab.BABancosEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter()
         Me.BATransaccionesEncabezadoTableAdapter = New RSIContab.BABancosEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter()
-        Me.BindingSourceSaldos = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CTCatalogoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BASaldosMensualesTableAdapter = New RSIContab.BABancosEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter()
+        Me.CTCatalogoCuentasTableAdapter = New RSIContab.BABancosEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter()
         Me.TabControl2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.C1NumericEditUltimoDeposito, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BABancosEdicionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditUltimoCheque, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditUltimaNotaDebito, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditUltimaNotaCredito, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditUltimaTransferencia, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.C1NumericEditCuentaContable, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1TextBoxCuentaAjuste, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.C1ButtonCuentaAjuste, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditFactorCambio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1CheckBoxCuentaExtranjera, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1ComboBoxMoneda, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,9 +129,11 @@ Partial Class BABancosEdicionFrm
         CType(Me.C1NumericEditMontoSobregiro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BATransEncBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
         CType(Me.C1NumericEditActual, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditCreditos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSourceSaldos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditDebitos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditDepositos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditCheques, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,12 +145,7 @@ Partial Class BABancosEdicionFrm
         CType(Me.C1NumericEditDepositosValEquiv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditChequesValEquiv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.C1NumericEditSaldoAnteriorValEquiv, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BABancosEdicionDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BATransEncBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BABancosEdicionDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BATransDetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BindingSourceSaldos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CTCatalogoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl2
@@ -198,8 +199,18 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditUltimoDeposito.Name = "C1NumericEditUltimoDeposito"
         Me.C1NumericEditUltimoDeposito.Size = New System.Drawing.Size(86, 18)
         Me.C1NumericEditUltimoDeposito.TabIndex = 23
-        Me.C1NumericEditUltimoDeposito.Tag = Nothing
+        Me.C1NumericEditUltimoDeposito.Tag = "CM"
         Me.C1NumericEditUltimoDeposito.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
+        '
+        'PrincipalBindingSource
+        '
+        Me.PrincipalBindingSource.DataMember = "BABancos"
+        Me.PrincipalBindingSource.DataSource = Me.BABancosEdicionDataSet
+        '
+        'BABancosEdicionDataSet
+        '
+        Me.BABancosEdicionDataSet.DataSetName = "BABancosEdicionDataSet"
+        Me.BABancosEdicionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'C1NumericEditUltimoCheque
         '
@@ -210,7 +221,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditUltimoCheque.Name = "C1NumericEditUltimoCheque"
         Me.C1NumericEditUltimoCheque.Size = New System.Drawing.Size(86, 18)
         Me.C1NumericEditUltimoCheque.TabIndex = 22
-        Me.C1NumericEditUltimoCheque.Tag = Nothing
+        Me.C1NumericEditUltimoCheque.Tag = "CM"
         Me.C1NumericEditUltimoCheque.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1NumericEditUltimaNotaDebito
@@ -222,7 +233,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditUltimaNotaDebito.Name = "C1NumericEditUltimaNotaDebito"
         Me.C1NumericEditUltimaNotaDebito.Size = New System.Drawing.Size(86, 18)
         Me.C1NumericEditUltimaNotaDebito.TabIndex = 21
-        Me.C1NumericEditUltimaNotaDebito.Tag = Nothing
+        Me.C1NumericEditUltimaNotaDebito.Tag = "CM"
         Me.C1NumericEditUltimaNotaDebito.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1NumericEditUltimaNotaCredito
@@ -234,7 +245,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditUltimaNotaCredito.Name = "C1NumericEditUltimaNotaCredito"
         Me.C1NumericEditUltimaNotaCredito.Size = New System.Drawing.Size(86, 18)
         Me.C1NumericEditUltimaNotaCredito.TabIndex = 20
-        Me.C1NumericEditUltimaNotaCredito.Tag = Nothing
+        Me.C1NumericEditUltimaNotaCredito.Tag = "CM"
         Me.C1NumericEditUltimaNotaCredito.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1NumericEditUltimaTransferencia
@@ -246,7 +257,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditUltimaTransferencia.Name = "C1NumericEditUltimaTransferencia"
         Me.C1NumericEditUltimaTransferencia.Size = New System.Drawing.Size(86, 18)
         Me.C1NumericEditUltimaTransferencia.TabIndex = 19
-        Me.C1NumericEditUltimaTransferencia.Tag = Nothing
+        Me.C1NumericEditUltimaTransferencia.Tag = "CM"
         Me.C1NumericEditUltimaTransferencia.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label31
@@ -296,7 +307,9 @@ Partial Class BABancosEdicionFrm
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.C1NumericEditCuentaContable)
+        Me.GroupBox5.Controls.Add(Me.C1TextBoxCuentaAjuste)
+        Me.GroupBox5.Controls.Add(Me.LabelCuentaAjuste)
+        Me.GroupBox5.Controls.Add(Me.C1ButtonCuentaAjuste)
         Me.GroupBox5.Controls.Add(Me.C1NumericEditFactorCambio)
         Me.GroupBox5.Controls.Add(Me.C1CheckBoxCuentaExtranjera)
         Me.GroupBox5.Controls.Add(Me.C1ComboBoxMoneda)
@@ -310,16 +323,33 @@ Partial Class BABancosEdicionFrm
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Moneda Extranjera"
         '
-        'C1NumericEditCuentaContable
+        'C1TextBoxCuentaAjuste
         '
-        Me.C1NumericEditCuentaContable.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaAjuste", True))
-        Me.C1NumericEditCuentaContable.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.C1NumericEditCuentaContable.Location = New System.Drawing.Point(102, 70)
-        Me.C1NumericEditCuentaContable.Name = "C1NumericEditCuentaContable"
-        Me.C1NumericEditCuentaContable.Size = New System.Drawing.Size(171, 18)
-        Me.C1NumericEditCuentaContable.TabIndex = 28
-        Me.C1NumericEditCuentaContable.Tag = Nothing
-        Me.C1NumericEditCuentaContable.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
+        Me.C1TextBoxCuentaAjuste.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaAjuste", True))
+        Me.C1TextBoxCuentaAjuste.Location = New System.Drawing.Point(102, 68)
+        Me.C1TextBoxCuentaAjuste.Name = "C1TextBoxCuentaAjuste"
+        Me.C1TextBoxCuentaAjuste.Size = New System.Drawing.Size(171, 18)
+        Me.C1TextBoxCuentaAjuste.TabIndex = 34
+        Me.C1TextBoxCuentaAjuste.Tag = "CM"
+        '
+        'LabelCuentaAjuste
+        '
+        Me.LabelCuentaAjuste.AutoSize = True
+        Me.LabelCuentaAjuste.Location = New System.Drawing.Point(311, 73)
+        Me.LabelCuentaAjuste.Name = "LabelCuentaAjuste"
+        Me.LabelCuentaAjuste.Size = New System.Drawing.Size(16, 13)
+        Me.LabelCuentaAjuste.TabIndex = 33
+        Me.LabelCuentaAjuste.Text = "..."
+        '
+        'C1ButtonCuentaAjuste
+        '
+        Me.C1ButtonCuentaAjuste.Image = Global.RSIContab.My.Resources.Resources._1425432924_Magnifier2
+        Me.C1ButtonCuentaAjuste.Location = New System.Drawing.Point(279, 65)
+        Me.C1ButtonCuentaAjuste.Name = "C1ButtonCuentaAjuste"
+        Me.C1ButtonCuentaAjuste.Size = New System.Drawing.Size(26, 23)
+        Me.C1ButtonCuentaAjuste.TabIndex = 33
+        Me.C1ButtonCuentaAjuste.Tag = "CM"
+        Me.C1ButtonCuentaAjuste.UseVisualStyleBackColor = True
         '
         'C1NumericEditFactorCambio
         '
@@ -329,7 +359,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditFactorCambio.Name = "C1NumericEditFactorCambio"
         Me.C1NumericEditFactorCambio.Size = New System.Drawing.Size(171, 18)
         Me.C1NumericEditFactorCambio.TabIndex = 27
-        Me.C1NumericEditFactorCambio.Tag = Nothing
+        Me.C1NumericEditFactorCambio.Tag = "CM"
         Me.C1NumericEditFactorCambio.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1CheckBoxCuentaExtranjera
@@ -357,7 +387,7 @@ Partial Class BABancosEdicionFrm
         Me.C1ComboBoxMoneda.Name = "C1ComboBoxMoneda"
         Me.C1ComboBoxMoneda.Size = New System.Drawing.Size(214, 18)
         Me.C1ComboBoxMoneda.TabIndex = 13
-        Me.C1ComboBoxMoneda.Tag = Nothing
+        Me.C1ComboBoxMoneda.Tag = "CM"
         '
         'Label24
         '
@@ -438,7 +468,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditCodigo.Name = "C1NumericEditCodigo"
         Me.C1NumericEditCodigo.Size = New System.Drawing.Size(77, 18)
         Me.C1NumericEditCodigo.TabIndex = 29
-        Me.C1NumericEditCodigo.Tag = Nothing
+        Me.C1NumericEditCodigo.Tag = "CO"
         Me.C1NumericEditCodigo.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'C1TextBoxCuentaBancaria
@@ -448,7 +478,7 @@ Partial Class BABancosEdicionFrm
         Me.C1TextBoxCuentaBancaria.Name = "C1TextBoxCuentaBancaria"
         Me.C1TextBoxCuentaBancaria.Size = New System.Drawing.Size(174, 18)
         Me.C1TextBoxCuentaBancaria.TabIndex = 26
-        Me.C1TextBoxCuentaBancaria.Tag = Nothing
+        Me.C1TextBoxCuentaBancaria.Tag = "CMO"
         '
         'C1TextBoxFormatoCheque
         '
@@ -457,7 +487,7 @@ Partial Class BABancosEdicionFrm
         Me.C1TextBoxFormatoCheque.Name = "C1TextBoxFormatoCheque"
         Me.C1TextBoxFormatoCheque.Size = New System.Drawing.Size(174, 18)
         Me.C1TextBoxFormatoCheque.TabIndex = 25
-        Me.C1TextBoxFormatoCheque.Tag = Nothing
+        Me.C1TextBoxFormatoCheque.Tag = "CM"
         '
         'C1ButtonCuentaContable
         '
@@ -481,7 +511,7 @@ Partial Class BABancosEdicionFrm
         Me.C1ComboBoxImpresora.Name = "C1ComboBoxImpresora"
         Me.C1ComboBoxImpresora.Size = New System.Drawing.Size(214, 18)
         Me.C1ComboBoxImpresora.TabIndex = 13
-        Me.C1ComboBoxImpresora.Tag = Nothing
+        Me.C1ComboBoxImpresora.Tag = "CM"
         '
         'C1TextBoxCuentaContable
         '
@@ -490,7 +520,7 @@ Partial Class BABancosEdicionFrm
         Me.C1TextBoxCuentaContable.Name = "C1TextBoxCuentaContable"
         Me.C1TextBoxCuentaContable.Size = New System.Drawing.Size(139, 18)
         Me.C1TextBoxCuentaContable.TabIndex = 12
-        Me.C1TextBoxCuentaContable.Tag = Nothing
+        Me.C1TextBoxCuentaContable.Tag = "CO"
         '
         'C1TextBoxDescripcion
         '
@@ -499,7 +529,7 @@ Partial Class BABancosEdicionFrm
         Me.C1TextBoxDescripcion.Name = "C1TextBoxDescripcion"
         Me.C1TextBoxDescripcion.Size = New System.Drawing.Size(483, 18)
         Me.C1TextBoxDescripcion.TabIndex = 11
-        Me.C1TextBoxDescripcion.Tag = Nothing
+        Me.C1TextBoxDescripcion.Tag = "CMO"
         '
         'C1NumericEditMontoSobregiro
         '
@@ -509,7 +539,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditMontoSobregiro.Name = "C1NumericEditMontoSobregiro"
         Me.C1NumericEditMontoSobregiro.Size = New System.Drawing.Size(167, 18)
         Me.C1NumericEditMontoSobregiro.TabIndex = 10
-        Me.C1NumericEditMontoSobregiro.Tag = Nothing
+        Me.C1NumericEditMontoSobregiro.Tag = "CM"
         Me.C1NumericEditMontoSobregiro.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label23
@@ -604,6 +634,11 @@ Partial Class BABancosEdicionFrm
         Me.C1TrueDBGrid1.UseCompatibleTextRendering = False
         Me.C1TrueDBGrid1.PropBag = resources.GetString("C1TrueDBGrid1.PropBag")
         '
+        'BATransEncBindingSource
+        '
+        Me.BATransEncBindingSource.DataMember = "BATransaccionesEncabezado"
+        Me.BATransEncBindingSource.DataSource = Me.BABancosEdicionDataSet
+        '
         'GroupBox7
         '
         Me.GroupBox7.Controls.Add(Me.C1NumericEditActual)
@@ -647,6 +682,11 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditCreditos.Tag = Nothing
         Me.C1NumericEditCreditos.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
+        'BindingSourceSaldos
+        '
+        Me.BindingSourceSaldos.DataMember = "BASaldosMensuales"
+        Me.BindingSourceSaldos.DataSource = Me.BABancosEdicionDataSet
+        '
         'C1NumericEditDebitos
         '
         Me.C1NumericEditDebitos.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "NotasDebito", True))
@@ -688,7 +728,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditSaldoAnterior.Name = "C1NumericEditSaldoAnterior"
         Me.C1NumericEditSaldoAnterior.Size = New System.Drawing.Size(89, 18)
         Me.C1NumericEditSaldoAnterior.TabIndex = 13
-        Me.C1NumericEditSaldoAnterior.Tag = Nothing
+        Me.C1NumericEditSaldoAnterior.Tag = "CM"
         Me.C1NumericEditSaldoAnterior.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'GroupBox8
@@ -769,7 +809,7 @@ Partial Class BABancosEdicionFrm
         Me.C1NumericEditSaldoAnteriorValEquiv.Name = "C1NumericEditSaldoAnteriorValEquiv"
         Me.C1NumericEditSaldoAnteriorValEquiv.Size = New System.Drawing.Size(89, 18)
         Me.C1NumericEditSaldoAnteriorValEquiv.TabIndex = 19
-        Me.C1NumericEditSaldoAnteriorValEquiv.Tag = Nothing
+        Me.C1NumericEditSaldoAnteriorValEquiv.Tag = "CM"
         Me.C1NumericEditSaldoAnteriorValEquiv.VisibleButtons = C1.Win.C1Input.DropDownControlButtonFlags.None
         '
         'Label37
@@ -840,51 +880,26 @@ Partial Class BABancosEdicionFrm
         Me.EditDataNavBarPrin.TabIndex = 1
         Me.EditDataNavBarPrin.ValidacionCorrecta = False
         '
-        'PrincipalBindingSource
-        '
-        Me.PrincipalBindingSource.DataMember = "BABancos"
-        Me.PrincipalBindingSource.DataSource = Me.BABancosEdicionDataSet
-        '
-        'BABancosEdicionDataSet
-        '
-        Me.BABancosEdicionDataSet.DataSetName = "BABancosEdicionDataSet"
-        Me.BABancosEdicionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BATransEncBindingSource
-        '
-        Me.BATransEncBindingSource.DataMember = "BATransaccionesEncabezado"
-        Me.BATransEncBindingSource.DataSource = Me.BABancosEdicionDataSet1
-        '
-        'BABancosEdicionDataSet1
-        '
-        Me.BABancosEdicionDataSet1.DataSetName = "BABancosEdicionDataSet"
-        Me.BABancosEdicionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'BATransDetBindingSource
-        '
-        Me.BATransDetBindingSource.DataMember = "BATransaccionesDetalle"
-        Me.BATransDetBindingSource.DataSource = Me.BABancosEdicionDataSet
-        '
         'BABancosTableAdapter
         '
         Me.BABancosTableAdapter.ClearBeforeFill = True
-        '
-        'BATransaccionesDetalleTableAdapter
-        '
-        Me.BATransaccionesDetalleTableAdapter.ClearBeforeFill = True
         '
         'BATransaccionesEncabezadoTableAdapter
         '
         Me.BATransaccionesEncabezadoTableAdapter.ClearBeforeFill = True
         '
-        'BindingSourceSaldos
+        'CTCatalogoBindingSource
         '
-        Me.BindingSourceSaldos.DataMember = "BASaldosMensuales"
-        Me.BindingSourceSaldos.DataSource = Me.BABancosEdicionDataSet
+        Me.CTCatalogoBindingSource.DataMember = "CTCatalogoCuentas"
+        Me.CTCatalogoBindingSource.DataSource = Me.BABancosEdicionDataSet
         '
         'BASaldosMensualesTableAdapter
         '
         Me.BASaldosMensualesTableAdapter.ClearBeforeFill = True
+        '
+        'CTCatalogoCuentasTableAdapter
+        '
+        Me.CTCatalogoCuentasTableAdapter.ClearBeforeFill = True
         '
         'BABancosEdicionFrm
         '
@@ -898,13 +913,16 @@ Partial Class BABancosEdicionFrm
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         CType(Me.C1NumericEditUltimoDeposito, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BABancosEdicionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditUltimoCheque, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditUltimaNotaDebito, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditUltimaNotaCredito, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditUltimaTransferencia, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.C1NumericEditCuentaContable, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1TextBoxCuentaAjuste, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.C1ButtonCuentaAjuste, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditFactorCambio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1CheckBoxCuentaExtranjera, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1ComboBoxMoneda, System.ComponentModel.ISupportInitialize).EndInit()
@@ -921,10 +939,12 @@ Partial Class BABancosEdicionFrm
         CType(Me.C1NumericEditMontoSobregiro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         CType(Me.C1TrueDBGrid1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BATransEncBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         CType(Me.C1NumericEditActual, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditCreditos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSourceSaldos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditDebitos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditDepositos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditCheques, System.ComponentModel.ISupportInitialize).EndInit()
@@ -936,12 +956,7 @@ Partial Class BABancosEdicionFrm
         CType(Me.C1NumericEditDepositosValEquiv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditChequesValEquiv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.C1NumericEditSaldoAnteriorValEquiv, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BABancosEdicionDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BATransEncBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BABancosEdicionDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BATransDetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BindingSourceSaldos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CTCatalogoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1007,8 +1022,6 @@ Partial Class BABancosEdicionFrm
     Friend WithEvents PrincipalBindingSource As BindingSource
     Friend WithEvents BABancosEdicionDataSet As BABancosEdicionDataSet
     Friend WithEvents BABancosTableAdapter As BABancosEdicionDataSetTableAdapters.BABancosTableAdapter
-    Friend WithEvents BATransDetBindingSource As BindingSource
-    Friend WithEvents BATransaccionesDetalleTableAdapter As BABancosEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter
     Friend WithEvents EditDataNavBarPrin As EditDataNavBar
     Friend WithEvents C1TextBoxCuentaContable As C1.Win.C1Input.C1TextBox
     Friend WithEvents C1TextBoxDescripcion As C1.Win.C1Input.C1TextBox
@@ -1023,7 +1036,6 @@ Partial Class BABancosEdicionFrm
     Friend WithEvents C1NumericEditUltimaTransferencia As C1.Win.C1Input.C1NumericEdit
     Friend WithEvents C1CheckBoxCuentaExtranjera As C1.Win.C1Input.C1CheckBox
     Friend WithEvents C1TextBoxFormatoCheque As C1.Win.C1Input.C1TextBox
-    Friend WithEvents C1NumericEditCuentaContable As C1.Win.C1Input.C1NumericEdit
     Friend WithEvents C1NumericEditFactorCambio As C1.Win.C1Input.C1NumericEdit
     Friend WithEvents C1ButtonRecalcularSaldos As C1.Win.C1Input.C1Button
     Friend WithEvents LabelCuentaContable As Label
@@ -1043,8 +1055,12 @@ Partial Class BABancosEdicionFrm
     Friend WithEvents C1NumericEditCreditosValEquiv As C1.Win.C1Input.C1NumericEdit
     Friend WithEvents C1NumericEditDebitosValEquiv As C1.Win.C1Input.C1NumericEdit
     Friend WithEvents BATransEncBindingSource As BindingSource
-    Friend WithEvents BABancosEdicionDataSet1 As BABancosEdicionDataSet
     Friend WithEvents BATransaccionesEncabezadoTableAdapter As BABancosEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter
     Friend WithEvents BindingSourceSaldos As BindingSource
+    Friend WithEvents LabelCuentaAjuste As Label
+    Friend WithEvents C1ButtonCuentaAjuste As C1.Win.C1Input.C1Button
+    Friend WithEvents C1TextBoxCuentaAjuste As C1.Win.C1Input.C1TextBox
+    Friend WithEvents CTCatalogoBindingSource As BindingSource
     Friend WithEvents BASaldosMensualesTableAdapter As BABancosEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter
+    Friend WithEvents CTCatalogoCuentasTableAdapter As BABancosEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter
 End Class
