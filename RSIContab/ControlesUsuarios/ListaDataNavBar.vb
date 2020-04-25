@@ -23,19 +23,21 @@
             End If
         End If
     End Sub
+
+
     Public Sub HabilitarSoloBotonNuevo()
         ToolStripButtonNuevo.Enabled = True
         ToolStripButtonEditar.Enabled = False
         ToolStripButtonConsultar.Enabled = False
         ToolStripButtonRecargar.Enabled = False
-        ToolStripButtonEliminar.Enabled = False
+        'ToolStripButtonEliminar.Enabled = False
     End Sub
     Public Sub HabilitarTodosBotones()
         ToolStripButtonNuevo.Enabled = True
         ToolStripButtonEditar.Enabled = True
         ToolStripButtonConsultar.Enabled = True
         ToolStripButtonRecargar.Enabled = True
-        ToolStripButtonEliminar.Enabled = True
+        'ToolStripButtonEliminar.Enabled = True
     End Sub
 
     Private Sub ToolStripButtonNuevo_Click(sender As Object, e As EventArgs) Handles ToolStripButtonNuevo.Click
@@ -50,9 +52,9 @@
         RaiseEvent ConsultarRegistroClick(Me, e)
     End Sub
 
-    Private Sub ToolStripButtonEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEliminar.Click
-        RaiseEvent EliminarRegistroClick(Me, e)
-    End Sub
+    'Private Sub ToolStripButtonEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEliminar.Click
+    '    RaiseEvent EliminarRegistroClick(Me, e)
+    'End Sub
 
     Private Sub ToolStripButtonRecargar_Click(sender As Object, e As EventArgs) Handles ToolStripButtonRecargar.Click
         RaiseEvent RecargarDatosClick(Me, e)
@@ -61,4 +63,6 @@
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButtonSalir.Click, ToolStripButtonSalir.Click
         RaiseEvent SalirClick(Me, e)
     End Sub
+
+
 End Class

@@ -194,6 +194,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditUltimoDeposito.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "UltimoDeposito", True))
         Me.C1NumericEditUltimoDeposito.DataType = GetType(Integer)
+        Me.C1NumericEditUltimoDeposito.Enabled = False
         Me.C1NumericEditUltimoDeposito.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditUltimoDeposito.Location = New System.Drawing.Point(92, 56)
         Me.C1NumericEditUltimoDeposito.Name = "C1NumericEditUltimoDeposito"
@@ -216,6 +217,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditUltimoCheque.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "UltimoCheque", True))
         Me.C1NumericEditUltimoCheque.DataType = GetType(Integer)
+        Me.C1NumericEditUltimoCheque.Enabled = False
         Me.C1NumericEditUltimoCheque.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditUltimoCheque.Location = New System.Drawing.Point(92, 27)
         Me.C1NumericEditUltimoCheque.Name = "C1NumericEditUltimoCheque"
@@ -228,6 +230,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditUltimaNotaDebito.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "UltimaNotaDebito", True))
         Me.C1NumericEditUltimaNotaDebito.DataType = GetType(Integer)
+        Me.C1NumericEditUltimaNotaDebito.Enabled = False
         Me.C1NumericEditUltimaNotaDebito.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditUltimaNotaDebito.Location = New System.Drawing.Point(310, 59)
         Me.C1NumericEditUltimaNotaDebito.Name = "C1NumericEditUltimaNotaDebito"
@@ -240,6 +243,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditUltimaNotaCredito.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "UltimaNotaCredito", True))
         Me.C1NumericEditUltimaNotaCredito.DataType = GetType(Integer)
+        Me.C1NumericEditUltimaNotaCredito.Enabled = False
         Me.C1NumericEditUltimaNotaCredito.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditUltimaNotaCredito.Location = New System.Drawing.Point(310, 27)
         Me.C1NumericEditUltimaNotaCredito.Name = "C1NumericEditUltimaNotaCredito"
@@ -252,6 +256,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditUltimaTransferencia.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "UltimaTransferencia", True))
         Me.C1NumericEditUltimaTransferencia.DataType = GetType(Integer)
+        Me.C1NumericEditUltimaTransferencia.Enabled = False
         Me.C1NumericEditUltimaTransferencia.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditUltimaTransferencia.Location = New System.Drawing.Point(521, 30)
         Me.C1NumericEditUltimaTransferencia.Name = "C1NumericEditUltimaTransferencia"
@@ -326,6 +331,7 @@ Partial Class BABancosEdicionFrm
         'C1TextBoxCuentaAjuste
         '
         Me.C1TextBoxCuentaAjuste.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaAjuste", True))
+        Me.C1TextBoxCuentaAjuste.Enabled = False
         Me.C1TextBoxCuentaAjuste.Location = New System.Drawing.Point(102, 68)
         Me.C1TextBoxCuentaAjuste.Name = "C1TextBoxCuentaAjuste"
         Me.C1TextBoxCuentaAjuste.Size = New System.Drawing.Size(171, 18)
@@ -343,6 +349,7 @@ Partial Class BABancosEdicionFrm
         '
         'C1ButtonCuentaAjuste
         '
+        Me.C1ButtonCuentaAjuste.Enabled = False
         Me.C1ButtonCuentaAjuste.Image = Global.RSIContab.My.Resources.Resources._1425432924_Magnifier2
         Me.C1ButtonCuentaAjuste.Location = New System.Drawing.Point(279, 65)
         Me.C1ButtonCuentaAjuste.Name = "C1ButtonCuentaAjuste"
@@ -354,6 +361,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditFactorCambio
         '
         Me.C1NumericEditFactorCambio.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "FactorCambio", True))
+        Me.C1NumericEditFactorCambio.Enabled = False
         Me.C1NumericEditFactorCambio.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditFactorCambio.Location = New System.Drawing.Point(102, 43)
         Me.C1NumericEditFactorCambio.Name = "C1NumericEditFactorCambio"
@@ -366,6 +374,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1CheckBoxCuentaExtranjera.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.C1CheckBoxCuentaExtranjera.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaMonedaExtranjera", True))
+        Me.C1CheckBoxCuentaExtranjera.Enabled = False
         Me.C1CheckBoxCuentaExtranjera.Location = New System.Drawing.Point(10, 19)
         Me.C1CheckBoxCuentaExtranjera.Name = "C1CheckBoxCuentaExtranjera"
         Me.C1CheckBoxCuentaExtranjera.Size = New System.Drawing.Size(179, 24)
@@ -379,6 +388,7 @@ Partial Class BABancosEdicionFrm
         Me.C1ComboBoxMoneda.AllowSpinLoop = False
         Me.C1ComboBoxMoneda.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CodigoMoneda", True))
         Me.C1ComboBoxMoneda.DataType = GetType(Short)
+        Me.C1ComboBoxMoneda.Enabled = False
         Me.C1ComboBoxMoneda.GapHeight = 0
         Me.C1ComboBoxMoneda.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1ComboBoxMoneda.ItemsDisplayMember = ""
@@ -463,6 +473,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1NumericEditCodigo.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CodigoBanco", True))
         Me.C1NumericEditCodigo.DataType = GetType(Short)
+        Me.C1NumericEditCodigo.Enabled = False
         Me.C1NumericEditCodigo.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditCodigo.Location = New System.Drawing.Point(101, 22)
         Me.C1NumericEditCodigo.Name = "C1NumericEditCodigo"
@@ -474,6 +485,7 @@ Partial Class BABancosEdicionFrm
         'C1TextBoxCuentaBancaria
         '
         Me.C1TextBoxCuentaBancaria.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaBancaria", True))
+        Me.C1TextBoxCuentaBancaria.Enabled = False
         Me.C1TextBoxCuentaBancaria.Location = New System.Drawing.Point(101, 94)
         Me.C1TextBoxCuentaBancaria.Name = "C1TextBoxCuentaBancaria"
         Me.C1TextBoxCuentaBancaria.Size = New System.Drawing.Size(174, 18)
@@ -483,6 +495,7 @@ Partial Class BABancosEdicionFrm
         'C1TextBoxFormatoCheque
         '
         Me.C1TextBoxFormatoCheque.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "FormatoCheque", True))
+        Me.C1TextBoxFormatoCheque.Enabled = False
         Me.C1TextBoxFormatoCheque.Location = New System.Drawing.Point(101, 118)
         Me.C1TextBoxFormatoCheque.Name = "C1TextBoxFormatoCheque"
         Me.C1TextBoxFormatoCheque.Size = New System.Drawing.Size(174, 18)
@@ -491,6 +504,7 @@ Partial Class BABancosEdicionFrm
         '
         'C1ButtonCuentaContable
         '
+        Me.C1ButtonCuentaContable.Enabled = False
         Me.C1ButtonCuentaContable.Image = Global.RSIContab.My.Resources.Resources._1425432924_Magnifier2
         Me.C1ButtonCuentaContable.Location = New System.Drawing.Point(247, 68)
         Me.C1ButtonCuentaContable.Name = "C1ButtonCuentaContable"
@@ -503,6 +517,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1ComboBoxImpresora.AllowSpinLoop = False
         Me.C1ComboBoxImpresora.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "ImpresoraCheques", True))
+        Me.C1ComboBoxImpresora.Enabled = False
         Me.C1ComboBoxImpresora.GapHeight = 0
         Me.C1ComboBoxImpresora.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1ComboBoxImpresora.ItemsDisplayMember = ""
@@ -516,6 +531,7 @@ Partial Class BABancosEdicionFrm
         'C1TextBoxCuentaContable
         '
         Me.C1TextBoxCuentaContable.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "CuentaContable", True))
+        Me.C1TextBoxCuentaContable.Enabled = False
         Me.C1TextBoxCuentaContable.Location = New System.Drawing.Point(102, 70)
         Me.C1TextBoxCuentaContable.Name = "C1TextBoxCuentaContable"
         Me.C1TextBoxCuentaContable.Size = New System.Drawing.Size(139, 18)
@@ -525,6 +541,7 @@ Partial Class BABancosEdicionFrm
         'C1TextBoxDescripcion
         '
         Me.C1TextBoxDescripcion.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "DescripcionBanco", True))
+        Me.C1TextBoxDescripcion.Enabled = False
         Me.C1TextBoxDescripcion.Location = New System.Drawing.Point(101, 46)
         Me.C1TextBoxDescripcion.Name = "C1TextBoxDescripcion"
         Me.C1TextBoxDescripcion.Size = New System.Drawing.Size(483, 18)
@@ -534,6 +551,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditMontoSobregiro
         '
         Me.C1NumericEditMontoSobregiro.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "MontoSobregiro", True))
+        Me.C1NumericEditMontoSobregiro.Enabled = False
         Me.C1NumericEditMontoSobregiro.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditMontoSobregiro.Location = New System.Drawing.Point(417, 87)
         Me.C1NumericEditMontoSobregiro.Name = "C1NumericEditMontoSobregiro"
@@ -621,6 +639,7 @@ Partial Class BABancosEdicionFrm
         '
         Me.C1TrueDBGrid1.BorderColor = System.Drawing.SystemColors.WindowFrame
         Me.C1TrueDBGrid1.DataSource = Me.BATransEncBindingSource
+        Me.C1TrueDBGrid1.Enabled = False
         Me.C1TrueDBGrid1.GroupByCaption = "Drag a column header here to group by that column"
         Me.C1TrueDBGrid1.Images.Add(CType(resources.GetObject("C1TrueDBGrid1.Images"), System.Drawing.Image))
         Me.C1TrueDBGrid1.Location = New System.Drawing.Point(16, 172)
@@ -663,6 +682,7 @@ Partial Class BABancosEdicionFrm
         '
         'C1NumericEditActual
         '
+        Me.C1NumericEditActual.Enabled = False
         Me.C1NumericEditActual.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditActual.Location = New System.Drawing.Point(490, 45)
         Me.C1NumericEditActual.Name = "C1NumericEditActual"
@@ -674,6 +694,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditCreditos
         '
         Me.C1NumericEditCreditos.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "NotasCredito", True))
+        Me.C1NumericEditCreditos.Enabled = False
         Me.C1NumericEditCreditos.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditCreditos.Location = New System.Drawing.Point(395, 45)
         Me.C1NumericEditCreditos.Name = "C1NumericEditCreditos"
@@ -690,6 +711,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditDebitos
         '
         Me.C1NumericEditDebitos.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "NotasDebito", True))
+        Me.C1NumericEditDebitos.Enabled = False
         Me.C1NumericEditDebitos.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditDebitos.Location = New System.Drawing.Point(300, 45)
         Me.C1NumericEditDebitos.Name = "C1NumericEditDebitos"
@@ -701,6 +723,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditDepositos
         '
         Me.C1NumericEditDepositos.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "Depositos", True))
+        Me.C1NumericEditDepositos.Enabled = False
         Me.C1NumericEditDepositos.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditDepositos.Location = New System.Drawing.Point(205, 45)
         Me.C1NumericEditDepositos.Name = "C1NumericEditDepositos"
@@ -712,6 +735,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditCheques
         '
         Me.C1NumericEditCheques.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "Cheques", True))
+        Me.C1NumericEditCheques.Enabled = False
         Me.C1NumericEditCheques.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditCheques.Location = New System.Drawing.Point(110, 45)
         Me.C1NumericEditCheques.Name = "C1NumericEditCheques"
@@ -723,6 +747,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditSaldoAnterior
         '
         Me.C1NumericEditSaldoAnterior.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "SaldoAnterior", True))
+        Me.C1NumericEditSaldoAnterior.Enabled = False
         Me.C1NumericEditSaldoAnterior.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditSaldoAnterior.Location = New System.Drawing.Point(15, 45)
         Me.C1NumericEditSaldoAnterior.Name = "C1NumericEditSaldoAnterior"
@@ -749,6 +774,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditActualValEquiv
         '
         Me.C1NumericEditActualValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.PrincipalBindingSource, "MontoSobregiro", True))
+        Me.C1NumericEditActualValEquiv.Enabled = False
         Me.C1NumericEditActualValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditActualValEquiv.Location = New System.Drawing.Point(490, 35)
         Me.C1NumericEditActualValEquiv.Name = "C1NumericEditActualValEquiv"
@@ -760,6 +786,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditCreditosValEquiv
         '
         Me.C1NumericEditCreditosValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "NotasCreditoEquivalente", True))
+        Me.C1NumericEditCreditosValEquiv.Enabled = False
         Me.C1NumericEditCreditosValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditCreditosValEquiv.Location = New System.Drawing.Point(395, 35)
         Me.C1NumericEditCreditosValEquiv.Name = "C1NumericEditCreditosValEquiv"
@@ -771,6 +798,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditDebitosValEquiv
         '
         Me.C1NumericEditDebitosValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "NotasDebitoEquivalente", True))
+        Me.C1NumericEditDebitosValEquiv.Enabled = False
         Me.C1NumericEditDebitosValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditDebitosValEquiv.Location = New System.Drawing.Point(300, 35)
         Me.C1NumericEditDebitosValEquiv.Name = "C1NumericEditDebitosValEquiv"
@@ -782,6 +810,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditDepositosValEquiv
         '
         Me.C1NumericEditDepositosValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "DepositosEquivalente", True))
+        Me.C1NumericEditDepositosValEquiv.Enabled = False
         Me.C1NumericEditDepositosValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditDepositosValEquiv.Location = New System.Drawing.Point(205, 35)
         Me.C1NumericEditDepositosValEquiv.Name = "C1NumericEditDepositosValEquiv"
@@ -793,6 +822,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditChequesValEquiv
         '
         Me.C1NumericEditChequesValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "ChequesEquivalente", True))
+        Me.C1NumericEditChequesValEquiv.Enabled = False
         Me.C1NumericEditChequesValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditChequesValEquiv.Location = New System.Drawing.Point(110, 35)
         Me.C1NumericEditChequesValEquiv.Name = "C1NumericEditChequesValEquiv"
@@ -804,6 +834,7 @@ Partial Class BABancosEdicionFrm
         'C1NumericEditSaldoAnteriorValEquiv
         '
         Me.C1NumericEditSaldoAnteriorValEquiv.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.BindingSourceSaldos, "SaldoAnteriorEquivalente", True))
+        Me.C1NumericEditSaldoAnteriorValEquiv.Enabled = False
         Me.C1NumericEditSaldoAnteriorValEquiv.ImagePadding = New System.Windows.Forms.Padding(0)
         Me.C1NumericEditSaldoAnteriorValEquiv.Location = New System.Drawing.Point(15, 35)
         Me.C1NumericEditSaldoAnteriorValEquiv.Name = "C1NumericEditSaldoAnteriorValEquiv"

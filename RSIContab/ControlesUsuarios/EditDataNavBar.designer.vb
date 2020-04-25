@@ -24,7 +24,7 @@ Partial Class EditDataNavBar
     Private Sub InitializeComponent()
         Me.ToolStripBotones = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButtonGuardar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonEliminar = New System.Windows.Forms.ToolStripButton()
+        ' Me.ToolStripButtonEliminar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripBotones.SuspendLayout()
         Me.SuspendLayout()
@@ -32,7 +32,8 @@ Partial Class EditDataNavBar
         'ToolStripBotones
         '
         Me.ToolStripBotones.AutoSize = False
-        Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonGuardar, Me.ToolStripButtonEliminar, Me.ToolStripButtonSalir})
+        ' Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonGuardar, Me.ToolStripButtonEliminar, Me.ToolStripButtonSalir})
+        Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonGuardar, Me.ToolStripButtonSalir})
         Me.ToolStripBotones.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripBotones.Name = "ToolStripBotones"
         Me.ToolStripBotones.Size = New System.Drawing.Size(401, 58)
@@ -52,13 +53,13 @@ Partial Class EditDataNavBar
         '
         'ToolStripButtonEliminar
         '
-        Me.ToolStripButtonEliminar.Image = Global.RSIContab.My.Resources.Resources._1393551525_DeleteRed
-        Me.ToolStripButtonEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButtonEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButtonEliminar.Name = "ToolStripButtonEliminar"
-        Me.ToolStripButtonEliminar.Size = New System.Drawing.Size(54, 55)
-        Me.ToolStripButtonEliminar.Text = "Eliminar"
-        Me.ToolStripButtonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        ' Me.ToolStripButtonEliminar.Image = Global.RSIContab.My.Resources.Resources._1393551525_DeleteRed
+        'Me.ToolStripButtonEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        'Me.ToolStripButtonEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        'Me.ToolStripButtonEliminar.Name = "ToolStripButtonEliminar"
+        'Me.ToolStripButtonEliminar.Size = New System.Drawing.Size(54, 55)
+        'Me.ToolStripButtonEliminar.Text = "Eliminar"
+        'Me.ToolStripButtonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'ToolStripButtonSalir
         '
@@ -84,7 +85,7 @@ Partial Class EditDataNavBar
     End Sub
     Friend WithEvents ToolStripBotones As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButtonGuardar As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButtonEliminar As System.Windows.Forms.ToolStripButton
+    ' Friend WithEvents ToolStripButtonEliminar As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButtonSalir As System.Windows.Forms.ToolStripButton
 
 End Class

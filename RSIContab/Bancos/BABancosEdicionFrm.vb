@@ -61,7 +61,7 @@ Public Class BABancosEdicionFrm
             _Modalidad = value
         End Set
     End Property
-    Dim strIdentidadActual As String
+    Dim strIdentidadActual As Int16
     Dim dbCls As New CTClassLib.CTClass
     Dim CadCls As New Rsierpgencl.Rsierpcl.Cadenas
     Dim drCentros As SqlClient.SqlDataReader
@@ -71,10 +71,16 @@ Public Class BABancosEdicionFrm
     Dim boCuentaContSel As Boolean
     Dim boCuentaAjusteSel As Boolean
 
+    Private Sub BABancosEdicionFrm_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If Modalidad <> "NUEVO" Then
+            FormularioPrincipal.EliminarRegistroAbierto(intBanco)
+        End If
+    End Sub
+
     Private Sub EditDataNavBarPrin_GuardarClick(sender As Object, e As EventArgs) Handles EditDataNavBarPrin.GuardarClick
-        Me.Validate()
-        PrincipalBindingSource.EndEdit()
         Try
+            Me.Validate()
+            PrincipalBindingSource.EndEdit()
             Me.BABancosTableAdapter.Update(Me.BABancosEdicionDataSet.BABancos)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
@@ -83,23 +89,23 @@ Public Class BABancosEdicionFrm
     End Sub
 
     Private Sub BABancosEdicionFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         'TODO: esta línea de código carga datos en la tabla 'BABancosEdicionDataSet.CTCatalogoCuentas' Puede moverla o quitarla según sea necesario.
         Me.CTCatalogoCuentasTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BATransaccionesEncabezadoTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BASaldosMensualesTableAdapter.Connection.ConnectionString = strcnCAD
         Me.CTCatalogoCuentasTableAdapter.Fill(Me.BABancosEdicionDataSet.CTCatalogoCuentas)
-
+        dbCls.DBconStr = strcnCAD
+        drConf = dbCls.drConf
         If Modalidad = "NUEVO" Then
             PrincipalBindingSource.AddNew()
         End If
-        If Modalidad = "EDITAR" Then
-            Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BABancosEdicionDataSet.BATransaccionesEncabezado, _intBanco, _Año, _Mes)
+        If Modalidad <> "NUEVO" Then
+            CargarDatos()
+            'Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BABancosEdicionDataSet.BATransaccionesEncabezado, _intBanco, _Año, _Mes)
         End If
+        Me.EditDataNavBarPrin.HabilitarBotones(Me)
         Dim strImpInstaladas As String
-        dbCls.DBconStr = strcnCAD
-        EditDataNavBarPrin.ToolStripButtonEliminar.Visible = False
         For i As Int16 = 0 To PrinterSettings.InstalledPrinters.Count - 1
             strImpInstaladas = PrinterSettings.InstalledPrinters.Item(i)
             C1ComboBoxImpresora.Items.Add(strImpInstaladas)
@@ -109,6 +115,26 @@ Public Class BABancosEdicionFrm
         boCuentaContSel = False
         boCuentaAjusteSel = False
     End Sub
+
+    Public Sub CargarDatos()
+        Try
+            Me.BABancosTableAdapter.Fill(Me.BABancosEdicionDataSet.BABancos, intBanco)
+            Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BABancosEdicionDataSet.BATransaccionesEncabezado, intBanco, drConf("AñoEnProceso"), drConf("MesEnProceso"))
+            Me.BASaldosMensualesTableAdapter.Fill(Me.BABancosEdicionDataSet.BASaldosMensuales, intBanco, drConf("AñoEnProceso"), drConf("MesEnProceso"))
+            Dim drvBancos As DataRowView = Me.PrincipalBindingSource.Current
+            If Not IsDBNull(drvBancos("CuentaContable")) Then
+                Dim drCa2t As DataRow = Me.BABancosEdicionDataSet.CTCatalogoCuentas.FindByCuenta(C1TextBoxCuentaContable.Text)
+                LabelCuentaContable.Text = drCa2t("Descripcion")
+            End If
+            If Not IsDBNull(drvBancos("CuentaAjuste")) Then
+                Dim drCat As DataRow = Me.BABancosEdicionDataSet.CTCatalogoCuentas.FindByCuenta(C1TextBoxCuentaAjuste.Text)
+                LabelCuentaAjuste.Text = drCat("Descripcion")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
+        End Try
+    End Sub
+
 
     Private Sub C1ButtonCuentaContable_Click(sender As Object, e As EventArgs) Handles C1ButtonCuentaContable.Click
         boCuentaContSel = False

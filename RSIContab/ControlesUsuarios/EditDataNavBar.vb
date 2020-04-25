@@ -69,9 +69,9 @@
         RaiseEvent GuardarClick(Me, e)
     End Sub
 
-    Private Sub ToolStripButtonEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEliminar.Click
-        RaiseEvent EliminarRegistroClick(Me, e)
-    End Sub
+    '  Private Sub ToolStripButtonEliminar_Click(sender As Object, e As EventArgs) Handles ToolStripButtonEliminar.Click
+    'RaiseEvent EliminarRegistroClick(Me, e)
+    'End Sub
 
     Private Sub ToolStripButtonSalir_Click(sender As Object, e As EventArgs) Handles ToolStripButtonSalir.Click
         RaiseEvent SalirClick(Me, e)
@@ -180,11 +180,11 @@
         NuevoRegistro = False
         If Modalidad = "CONSULTAR" Then
             ToolStripButtonGuardar.Visible = False
-            ToolStripButtonEliminar.Visible = False
+            'ToolStripButtonEliminar.Visible = False
             ControlesSoloLectura(mForma)
         ElseIf Modalidad = "EDITAR" Or Modalidad = "NUEVO" Then
             ToolStripButtonGuardar.Visible = True
-            ToolStripButtonEliminar.Visible = False
+            ' ToolStripButtonEliminar.Visible = False
             If Modalidad = "EDITAR" Then
                 ModificarRegistro = True
             End If
@@ -194,7 +194,7 @@
             BloquearControles(mForma, False)
         ElseIf Modalidad = "ELIMINAR" Then
             ToolStripButtonGuardar.Visible = False
-            ToolStripButtonEliminar.Visible = True
+            '  ToolStripButtonEliminar.Visible = True
             ControlesSoloLectura(mForma)
         End If
     End Sub
