@@ -92,6 +92,7 @@ Public Class BABancosEdicionFrm
         'TODO: esta línea de código carga datos en la tabla 'BABancosEdicionDataSet.CTCatalogoCuentas' Puede moverla o quitarla según sea necesario.
         Me.CTCatalogoCuentasTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
+        Me.BATransaccionesDetalleTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BATransaccionesEncabezadoTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BASaldosMensualesTableAdapter.Connection.ConnectionString = strcnCAD
         Me.CTCatalogoCuentasTableAdapter.Fill(Me.BABancosEdicionDataSet.CTCatalogoCuentas)
@@ -129,6 +130,11 @@ Public Class BABancosEdicionFrm
             If Not IsDBNull(drvBancos("CuentaAjuste")) Then
                 Dim drCat As DataRow = Me.BABancosEdicionDataSet.CTCatalogoCuentas.FindByCuenta(C1TextBoxCuentaAjuste.Text)
                 LabelCuentaAjuste.Text = drCat("Descripcion")
+            End If
+            Dim drvSaldos As DataRowView = BindingSourceSaldos.Current
+            If Not drvSaldos Is Nothing Then
+                C1NumericEditSaldoActual.Value = drvSaldos("Depositos") + drvSaldos("NotasCredito") - drvSaldos("NotasDebito") - drvSaldos("Cheques")
+                C1NumericEditSaldoActualEquiv.Value = drvSaldos("DepositosEquivalente") + drvSaldos("NotasCreditoEquivalente") - drvSaldos("NotasDebitoEquivalente") - drvSaldos("ChequesEquivalente")
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Exclamation + MsgBoxStyle.OkOnly)
@@ -214,5 +220,52 @@ Public Class BABancosEdicionFrm
                 End If
             End If
         End If
+    End Sub
+
+    Private Sub C1ButtonRecalcularSaldos_Click(sender As Object, e As EventArgs) Handles C1ButtonRecalcularSaldos.Click
+        Dim decTotCheques As Decimal
+        Dim decTotDepositos As Decimal
+        Dim decTotDebitos As Decimal
+        Dim decTotCreditos As Decimal
+        Dim decTotChequesEq As Decimal
+        Dim decTotDepositosEq As Decimal
+        Dim decTotDebitosEq As Decimal
+        Dim decTotCreditosEq As Decimal
+        Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BABancosEdicionDataSet.BATransaccionesEncabezado, intBanco, drConf("AñoEnPronceso"), drConf("MesEnPronceso"))
+        For Each drvEnc In BATransaccionesDetBindingSource
+            If Not drvEnc("Anulado") Then
+                If drvEnc("DescripcionTipo") = "DP" Then
+                    decTotDepositos = decTotDepositos + drvEnc("Monto")
+                    decTotDepositosEq = decTotDepositosEq + (drvEnc("Monto") * drvEnc("FactorCambio"))
+                End If
+                If drvEnc("DescripcionTipo") = "CH" Then
+                    decTotCheques = decTotCheques + drvEnc("Monto")
+                    decTotChequesEq = decTotChequesEq + (drvEnc("Monto") * drvEnc("FactorCambio"))
+                End If
+                If drvEnc("DescripcionTipo") = "ND" Then
+                    decTotDebitos = decTotDebitos + drvEnc("Monto")
+                    decTotDebitosEq = decTotDebitosEq + (drvEnc("Monto") * drvEnc("FactorCambio"))
+                End If
+                If drvEnc("DescripcionTipo") = "NC" Then
+                    decTotCreditos = decTotCreditos + drvEnc("Monto")
+                    decTotCreditosEq = decTotCreditosEq + (drvEnc("Monto") * drvEnc("FactorCambio"))
+                End If
+                If drvEnc("DescripcionTipo") = "TR" Then
+                    decTotDebitos = decTotDebitos + drvEnc("Monto")
+                    decTotDebitosEq = decTotDebitosEq + (drvEnc("Monto") * drvEnc("FactorCambio"))
+                End If
+            End If
+        Next
+        Dim drvSaldos As DataRowView = BindingSourceSaldos.Current
+        drvSaldos("Cheques") = decTotCheques
+        drvSaldos("ChequesEquivalente") = decTotChequesEq
+        drvSaldos("NotasCredito") = decTotCreditos
+        drvSaldos("NotasCreditoEquivalente") = decTotCreditosEq
+        drvSaldos("NotasDebito") = decTotDebitos
+        drvSaldos("NotasDebitoEquivalente") = decTotDebitosEq
+        BindingSourceSaldos.EndEdit()
+        BASaldosMensualesTableAdapter.Update(BABancosEdicionDataSet.BASaldosMensuales)
+        Me.C1NumericEditSaldoActual.Value = decTotDepositos + decTotCreditos - decTotCheques - decTotDebitos
+        Me.C1NumericEditSaldoActual.Value = decTotDepositosEq + decTotCreditosEq - decTotChequesEq - decTotDebitosEq
     End Sub
 End Class
