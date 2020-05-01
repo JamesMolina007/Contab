@@ -140,6 +140,12 @@
     <Compile Include="Bancos\BAConfFrm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Bancos\BADepNotasTransfFrm.Designer.vb">
+      <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bancos\BADepNotasTransfFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Contabilidad\CTAgregarCuentaFrm.designer.vb">
       <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
     </Compile>
@@ -1100,6 +1106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bancos\BAConfFrm.resx">
       <DependentUpon>BAConfFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bancos\BADepNotasTransfFrm.resx">
+      <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contabilidad\CTAgregarCuentaFrm.resx">
       <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
@@ -2368,6 +2377,13 @@
     <None Include="Resources\search-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1393113806_Doc_single.png" />
+    <None Include="Resources\1393292018_gear_48.png" />
+    <None Include="Resources\1393538728_Zoom.png" />
+    <None Include="Resources\1393538785_Zoom.png" />
+    <None Include="Resources\1393538860_tick_32.png" />
+    <None Include="Resources\1393538975_tick_48.png" />
+    <None Include="Resources\1421198824_gear_32.png" />
     <Content Include="Sis.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
