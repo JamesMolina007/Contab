@@ -63,9 +63,9 @@ Public Class BABancosEdicionFrm
     End Property
     Dim strIdentidadActual As Int16
     Dim dbCls As New CTClassLib.CTClass
+    Dim drConf As SqlClient.SqlDataReader
     Dim CadCls As New Rsierpgencl.Rsierpcl.Cadenas
     Dim drCentros As SqlClient.SqlDataReader
-    Dim drConf As SqlClient.SqlDataReader
     Dim mCentroSeleccionado As Boolean
     Dim ListaCatalogoFrm As New CtListaCatGenFrm
     Dim boCuentaContSel As Boolean

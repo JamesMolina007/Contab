@@ -2,9 +2,10 @@
 <xs:schema id="BATransaccionesListaDataSet" targetNamespace="http://tempuri.org/BATransaccionesListaDataSet.xsd" xmlns:mstns="http://tempuri.org/BATransaccionesListaDataSet.xsd" xmlns="http://tempuri.org/BATransaccionesListaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSIERP_Conexion" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSIERP_Conexion (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSIERP_Conexion" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="RSISistemaConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RSISistemaConnectionString3 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.RSIContab.My.MySettings.GlobalReference.Default.RSISistemaConnectionString3" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BATransaccionesEncabezadoTableAdapter" GeneratorDataComponentClassName="BATransaccionesEncabezadoTableAdapter" Name="BATransaccionesEncabezado" UserDataComponentName="BATransaccionesEncabezadoTableAdapter">
@@ -57,6 +58,48 @@ WHERE        (CodigoBanco = @CodigoBanco) AND (TipoDocumento = @TipoDocumento) A
               <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
               <Mapping SourceColumn="Año" DataSetColumn="Año" />
               <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BABancosTableAdapter" GeneratorDataComponentClassName="BABancosTableAdapter" Name="BABancos" UserDataComponentName="BABancosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSISistemaConnectionString3 (MySettings)" DbObjectName="RSISistema.dbo.BABancos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CodigoBanco, DescripcionBanco, CuentaBancaria
+FROM            BABancos
+ORDER BY CodigoBanco</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodigoBanco" DataSetColumn="CodigoBanco" />
+              <Mapping SourceColumn="DescripcionBanco" DataSetColumn="DescripcionBanco" />
+              <Mapping SourceColumn="CuentaBancaria" DataSetColumn="CuentaBancaria" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BAConfTableAdapter" GeneratorDataComponentClassName="BAConfTableAdapter" Name="BAConf" UserDataComponentName="BAConfTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RSISistemaConnectionString3 (MySettings)" DbObjectName="RSISistema.dbo.BAConf" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Id, AñoEnProceso, MesEnProceso, FechaProceso, EnlazadoContabilidad, CrearPartidaContable, PosImpresionCheques FROM dbo.BAConf</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="AñoEnProceso" DataSetColumn="AñoEnProceso" />
+              <Mapping SourceColumn="MesEnProceso" DataSetColumn="MesEnProceso" />
+              <Mapping SourceColumn="FechaProceso" DataSetColumn="FechaProceso" />
+              <Mapping SourceColumn="EnlazadoContabilidad" DataSetColumn="EnlazadoContabilidad" />
+              <Mapping SourceColumn="CrearPartidaContable" DataSetColumn="CrearPartidaContable" />
+              <Mapping SourceColumn="PosImpresionCheques" DataSetColumn="PosImpresionCheques" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -140,10 +183,58 @@ WHERE        (CodigoBanco = @CodigoBanco) AND (TipoDocumento = @TipoDocumento) A
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="BABancos" msprop:Generator_TableClassName="BABancosDataTable" msprop:Generator_TableVarName="tableBABancos" msprop:Generator_RowChangedName="BABancosRowChanged" msprop:Generator_TablePropName="BABancos" msprop:Generator_RowDeletingName="BABancosRowDeleting" msprop:Generator_RowChangingName="BABancosRowChanging" msprop:Generator_RowEvHandlerName="BABancosRowChangeEventHandler" msprop:Generator_RowDeletedName="BABancosRowDeleted" msprop:Generator_RowClassName="BABancosRow" msprop:Generator_UserTableName="BABancos" msprop:Generator_RowEvArgName="BABancosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoBanco" msprop:Generator_ColumnVarNameInTable="columnCodigoBanco" msprop:Generator_ColumnPropNameInRow="CodigoBanco" msprop:Generator_ColumnPropNameInTable="CodigoBancoColumn" msprop:Generator_UserColumnName="CodigoBanco" type="xs:short" />
+              <xs:element name="DescripcionBanco" msprop:Generator_ColumnVarNameInTable="columnDescripcionBanco" msprop:Generator_ColumnPropNameInRow="DescripcionBanco" msprop:Generator_ColumnPropNameInTable="DescripcionBancoColumn" msprop:Generator_UserColumnName="DescripcionBanco">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CuentaBancaria" msprop:Generator_ColumnVarNameInTable="columnCuentaBancaria" msprop:Generator_ColumnPropNameInRow="CuentaBancaria" msprop:Generator_ColumnPropNameInTable="CuentaBancariaColumn" msprop:Generator_UserColumnName="CuentaBancaria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BAConf" msprop:Generator_TableClassName="BAConfDataTable" msprop:Generator_TableVarName="tableBAConf" msprop:Generator_TablePropName="BAConf" msprop:Generator_RowDeletingName="BAConfRowDeleting" msprop:Generator_RowChangingName="BAConfRowChanging" msprop:Generator_RowEvHandlerName="BAConfRowChangeEventHandler" msprop:Generator_RowDeletedName="BAConfRowDeleted" msprop:Generator_UserTableName="BAConf" msprop:Generator_RowChangedName="BAConfRowChanged" msprop:Generator_RowEvArgName="BAConfRowChangeEvent" msprop:Generator_RowClassName="BAConfRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="AñoEnProceso" msprop:Generator_ColumnVarNameInTable="columnAñoEnProceso" msprop:Generator_ColumnPropNameInRow="AñoEnProceso" msprop:Generator_ColumnPropNameInTable="AñoEnProcesoColumn" msprop:Generator_UserColumnName="AñoEnProceso" type="xs:short" />
+              <xs:element name="MesEnProceso" msprop:Generator_ColumnVarNameInTable="columnMesEnProceso" msprop:Generator_ColumnPropNameInRow="MesEnProceso" msprop:Generator_ColumnPropNameInTable="MesEnProcesoColumn" msprop:Generator_UserColumnName="MesEnProceso" type="xs:short" />
+              <xs:element name="FechaProceso" msprop:Generator_ColumnVarNameInTable="columnFechaProceso" msprop:Generator_ColumnPropNameInRow="FechaProceso" msprop:Generator_ColumnPropNameInTable="FechaProcesoColumn" msprop:Generator_UserColumnName="FechaProceso" type="xs:dateTime" />
+              <xs:element name="EnlazadoContabilidad" msprop:Generator_ColumnVarNameInTable="columnEnlazadoContabilidad" msprop:Generator_ColumnPropNameInRow="EnlazadoContabilidad" msprop:Generator_ColumnPropNameInTable="EnlazadoContabilidadColumn" msprop:Generator_UserColumnName="EnlazadoContabilidad" type="xs:boolean" />
+              <xs:element name="CrearPartidaContable" msprop:Generator_ColumnVarNameInTable="columnCrearPartidaContable" msprop:Generator_ColumnPropNameInRow="CrearPartidaContable" msprop:Generator_ColumnPropNameInTable="CrearPartidaContableColumn" msprop:Generator_UserColumnName="CrearPartidaContable">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PosImpresionCheques" msprop:Generator_ColumnVarNameInTable="columnPosImpresionCheques" msprop:Generator_ColumnPropNameInRow="PosImpresionCheques" msprop:Generator_ColumnPropNameInTable="PosImpresionChequesColumn" msprop:Generator_UserColumnName="PosImpresionCheques" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:BATransaccionesEncabezado" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="BABancos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BABancos" />
+      <xs:field xpath="mstns:CodigoBanco" />
+    </xs:unique>
+    <xs:unique name="BAConf_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BAConf" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>

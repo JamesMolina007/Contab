@@ -578,5 +578,7 @@
         BABancosFrm.Show()
     End Sub
 
-
+    Private Sub PruebaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PruebaToolStripMenuItem.Click
+        BADepNotasTransfFrm.Show()
+    End Sub
 End Class

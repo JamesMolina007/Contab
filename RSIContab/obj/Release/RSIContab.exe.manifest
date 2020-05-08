@@ -366,7 +366,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>N4iDuDUf/GGB0muTDub8k1nkTjM=</dsig:DigestValue>
+        <dsig:DigestValue>PHsrIJoNxl3rRlmc8DPaxuplcU4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -402,19 +402,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ilQW/Xj6WUxLh2w+q2nWOXeEN0Y=</dsig:DigestValue>
+        <dsig:DigestValue>cyaT6h2Y0BrTOk1YkgdnVjSm+Bc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5407232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RSIContab.exe" size="5620224">
       <assemblyIdentity name="RSIContab" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vC8OvG/U4eVQgW2nkTHUmzscqMU=</dsig:DigestValue>
+        <dsig:DigestValue>dtnYZbqDOs9wi1KRPYjFZsLQ5ZQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
