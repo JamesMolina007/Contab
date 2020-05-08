@@ -876,6 +876,9 @@ C:\Desarrollo\ContabJJ\Contab\Contab\RSIContab\obj\Release\RSIContab.application
 C:\Desarrollo\ContabJJ\Contab\Contab\RSIContab\obj\Release\RSIContab.exe
 C:\Desarrollo\ContabJJ\Contab\Contab\RSIContab\obj\Release\RSIContab.xml
 C:\Desarrollo\ContabJJ\Contab\Contab\RSIContab\obj\Release\RSIContab.pdb
+<<<<<<< HEAD
 C:\Desarrollo\ColiNET2013.5\Contab\RSIContab\obj\Release\RSIContab.BADepNotasTransEdicionFrm.resources
 C:\Desarrollo\ColiNET2013.5\Contab\RSIContab\obj\Release\RSIContab.BADepNotasTransfFrm.resources
 C:\Desarrollo\ColiNET2013.5\Contab\RSIContab\obj\Release\RSIContab.BAListaBancosFrm.resources
+=======
+>>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
