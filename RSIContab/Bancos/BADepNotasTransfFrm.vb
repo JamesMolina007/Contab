@@ -6,12 +6,9 @@ Public Class BADepNotasTransfFrm
     Dim drConf As SqlClient.SqlDataReader
     Dim drvBaConf As DataRowView
     Dim IntAño As Int16, intMes As Int16
-<<<<<<< HEAD
     Dim intTipoTrans As Int16
 
 
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
     Private Sub BADepNotasTransfFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MdiParent = MDIPrincipal
         Me.Top = 10
@@ -43,11 +40,7 @@ Public Class BADepNotasTransfFrm
     End Sub
 
     Private Sub butFiltrar_Click(sender As Object, e As EventArgs) Handles butFiltrar.Click
-<<<<<<< HEAD
 
-=======
-        Dim intTipoTrans As Int16
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
 
         If Me.BATransaccionesListaDataSet.BABancos.Rows.Count = 0 Then
             Me.ListaDataNavBarPrin.HabilitarSoloBotonNuevo()
@@ -92,24 +85,16 @@ Public Class BADepNotasTransfFrm
     Private Sub CargarForma(strModalidad As String)
         If strModalidad = "NUEVO" Then
             MsgBox("Entro en NUEVO")
-<<<<<<< HEAD
             Dim EditFormaFrm As New BADepNotasTransEdicionFrm
             EditFormaFrm.FormularioPrincipal = Me
             EditFormaFrm.MdiParent = Me.MdiParent
             EditFormaFrm.Modalidad = strModalidad
             '   EditFormaFrm.intBanco = ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text
-=======
-            Dim EditFormaFrm As New BABancosEdicionFrm
-            EditFormaFrm.FormularioPrincipal = Me
-            EditFormaFrm.MdiParent = Me.MdiParent
-            EditFormaFrm.Modalidad = strModalidad
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
             EditFormaFrm.Show()
         Else
             If ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text.Length > 0 Then
                 If dbCls.ExisteBanco(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text) Then
                     If Not ListaRegistrosAbiertos.Contains(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text) Then
-<<<<<<< HEAD
                         Dim EditFormaFrm As New BADepNotasTransEdicionFrm
                         EditFormaFrm.TipoDocumento = c1cmbTipoTrans.Text
                         EditFormaFrm.intBanco = ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text
@@ -117,13 +102,6 @@ Public Class BADepNotasTransfFrm
                         EditFormaFrm.MdiParent = Me.MdiParent
                         EditFormaFrm.Modalidad = strModalidad
                         EditFormaFrm.drvBanco = Me.BABancosBindingSource.Current
-=======
-                        Dim EditFormaFrm As New BABancosEdicionFrm
-                        EditFormaFrm.FormularioPrincipal = Me
-                        EditFormaFrm.MdiParent = Me.MdiParent
-                        EditFormaFrm.Modalidad = strModalidad
-                        EditFormaFrm.intBanco = ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
                         ListaRegistrosAbiertos.Add(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text, ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text)
                         ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text = ""
                         EditFormaFrm.Show()
@@ -133,7 +111,6 @@ Public Class BADepNotasTransfFrm
                 End If
             Else
                 Dim reg As DataRowView = PrincipalBindingSource.Current
-<<<<<<< HEAD
                 If Not ListaRegistrosAbiertos.Contains(reg("NoDocumento")) Then
                     Dim EditFormaFrm As New BADepNotasTransEdicionFrm
                     EditFormaFrm.FormularioPrincipal = Me
@@ -141,45 +118,27 @@ Public Class BADepNotasTransfFrm
                     EditFormaFrm.Modalidad = strModalidad
                     EditFormaFrm.drvBanco = reg("NoDocumento")
                     ListaRegistrosAbiertos.Add(reg("NoDocumento"), reg("NoDocumento"))
-=======
-                If Not ListaRegistrosAbiertos.Contains(reg("CodigoBanco")) Then
-                    Dim EditFormaFrm As New BABancosEdicionFrm
-                    EditFormaFrm.FormularioPrincipal = Me
-                    EditFormaFrm.MdiParent = Me.MdiParent
-                    EditFormaFrm.Modalidad = strModalidad
-                    EditFormaFrm.intBanco = reg("CodigoBanco")
-                    ListaRegistrosAbiertos.Add(reg("CodigoBanco"), reg("CodigoBanco"))
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
                     EditFormaFrm.Show()
                 End If
             End If
         End If
     End Sub
 
-<<<<<<< HEAD
     Public Sub EliminarRegistroAbierto(strNoDocumento As String)
         ListaRegistrosAbiertos.Remove(strNoDocumento)
+    End Sub
+
+    Private Sub ListaDataNavBarPrin_Load(sender As Object, e As EventArgs) Handles ListaDataNavBarPrin.Load
+        ''''''
     End Sub
 
     Private Sub RecargarDatos()
         Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BATransaccionesListaDataSet.BATransaccionesEncabezado, c1cmbBanco.SelectedValue, intTipoTrans, IntAño, intMes)
         If Me.BATransaccionesListaDataSet.BATransaccionesEncabezado.Rows.Count = 0 Then
-=======
-    Public Sub EliminarRegistroAbierto(strBanco As String)
-        ListaRegistrosAbiertos.Remove(strBanco)
-    End Sub
-
-    Private Sub RecargarDatos()
-        Me.BABancosTableAdapter.Fill(Me.BABancosListaDataSet.BABancos)
-        If Me.BABancosListaDataSet.BABancos.Rows.Count = 0 Then
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
             Me.ListaDataNavBarPrin.HabilitarSoloBotonNuevo()
         Else
             Me.ListaDataNavBarPrin.HabilitarTodosBotones()
         End If
     End Sub
-<<<<<<< HEAD
 
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
 End Class

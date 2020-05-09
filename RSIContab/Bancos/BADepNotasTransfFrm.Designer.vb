@@ -25,17 +25,12 @@ Partial Class BADepNotasTransfFrm
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BADepNotasTransfFrm))
         Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
-<<<<<<< HEAD
         Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BATransaccionesListaDataSet = New RSIContab.BATransaccionesListaDataSet()
         Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.c1cmbTipoTrans = New C1.Win.C1Input.C1ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-=======
-        Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         Me.butFiltrar = New System.Windows.Forms.Button()
         Me.butCambiarPeriodo = New System.Windows.Forms.Button()
         Me.lblMes = New System.Windows.Forms.Label()
@@ -43,22 +38,12 @@ Partial Class BADepNotasTransfFrm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.c1cmbBanco = New C1.Win.C1List.C1Combo()
-<<<<<<< HEAD
         Me.BABancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-=======
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.c1cmbTipoTrans = New C1.Win.C1Input.C1ComboBox()
-        Me.BABancosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BATransaccionesListaDataSet = New RSIContab.BATransaccionesListaDataSet()
-        Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         Me.BATransaccionesEncabezadoTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter()
         Me.BABancosTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BABancosTableAdapter()
         Me.BAConfBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BAConfTableAdapter = New RSIContab.BATransaccionesListaDataSetTableAdapters.BAConfTableAdapter()
-<<<<<<< HEAD
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,15 +51,6 @@ Partial Class BADepNotasTransfFrm
         CType(Me.c1cmbTipoTrans, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.c1cmbBanco, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-=======
-        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        CType(Me.c1cmbBanco, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.c1cmbTipoTrans, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         CType(Me.BAConfBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -86,7 +62,6 @@ Partial Class BADepNotasTransfFrm
         Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(1106, 69)
         Me.ListaDataNavBarPrin.TabIndex = 6
         '
-<<<<<<< HEAD
         'PrincipalBindingSource
         '
         Me.PrincipalBindingSource.DataMember = "BATransaccionesEncabezado"
@@ -97,8 +72,6 @@ Partial Class BADepNotasTransfFrm
         Me.BATransaccionesListaDataSet.DataSetName = "BATransaccionesListaDataSet"
         Me.BATransaccionesListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         'c1dbgrdNiveles
         '
         Me.c1dbgrdNiveles.AllowUpdate = False
@@ -143,7 +116,6 @@ Partial Class BADepNotasTransfFrm
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-<<<<<<< HEAD
         'c1cmbTipoTrans
         '
         Me.c1cmbTipoTrans.AllowSpinLoop = False
@@ -170,8 +142,6 @@ Partial Class BADepNotasTransfFrm
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Tipo:"
         '
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         'butFiltrar
         '
         Me.butFiltrar.Image = Global.RSIContab.My.Resources.Resources._1421885802_filter
@@ -251,7 +221,6 @@ Partial Class BADepNotasTransfFrm
         Me.c1cmbBanco.RowSubDividerColor = System.Drawing.Color.DarkGray
         Me.c1cmbBanco.Size = New System.Drawing.Size(314, 21)
         Me.c1cmbBanco.TabIndex = 1
-<<<<<<< HEAD
         Me.c1cmbBanco.ValueMember = "CodigoBanco"
         Me.c1cmbBanco.PropBag = resources.GetString("c1cmbBanco.PropBag")
         '
@@ -260,12 +229,6 @@ Partial Class BADepNotasTransfFrm
         Me.BABancosBindingSource.DataMember = "BABancos"
         Me.BABancosBindingSource.DataSource = Me.BATransaccionesListaDataSet
         '
-=======
-        Me.c1cmbBanco.Text = "C1Combo1"
-        Me.c1cmbBanco.ValueMember = "CodigoBanco"
-        Me.c1cmbBanco.PropBag = resources.GetString("c1cmbBanco.PropBag")
-        '
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -275,50 +238,6 @@ Partial Class BADepNotasTransfFrm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Banco:"
         '
-<<<<<<< HEAD
-=======
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 36)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Tipo:"
-        '
-        'c1cmbTipoTrans
-        '
-        Me.c1cmbTipoTrans.AllowSpinLoop = False
-        Me.c1cmbTipoTrans.GapHeight = 0
-        Me.c1cmbTipoTrans.ImagePadding = New System.Windows.Forms.Padding(0)
-        Me.c1cmbTipoTrans.Items.Add("Depósitos")
-        Me.c1cmbTipoTrans.Items.Add("Notas de Crédito")
-        Me.c1cmbTipoTrans.Items.Add("Notas de Débito")
-        Me.c1cmbTipoTrans.Items.Add("Transferencias")
-        Me.c1cmbTipoTrans.ItemsDisplayMember = ""
-        Me.c1cmbTipoTrans.ItemsValueMember = ""
-        Me.c1cmbTipoTrans.Location = New System.Drawing.Point(54, 37)
-        Me.c1cmbTipoTrans.Name = "c1cmbTipoTrans"
-        Me.c1cmbTipoTrans.Size = New System.Drawing.Size(150, 18)
-        Me.c1cmbTipoTrans.TabIndex = 10
-        Me.c1cmbTipoTrans.Tag = Nothing
-        '
-        'BABancosBindingSource
-        '
-        Me.BABancosBindingSource.DataMember = "BABancos"
-        Me.BABancosBindingSource.DataSource = Me.BATransaccionesListaDataSet
-        '
-        'BATransaccionesListaDataSet
-        '
-        Me.BATransaccionesListaDataSet.DataSetName = "BATransaccionesListaDataSet"
-        Me.BATransaccionesListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'PrincipalBindingSource
-        '
-        Me.PrincipalBindingSource.DataMember = "BATransaccionesEncabezado"
-        Me.PrincipalBindingSource.DataSource = Me.BATransaccionesListaDataSet
-        '
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         'BATransaccionesEncabezadoTableAdapter
         '
         Me.BATransaccionesEncabezadoTableAdapter.ClearBeforeFill = True
@@ -346,7 +265,6 @@ Partial Class BADepNotasTransfFrm
         Me.Controls.Add(Me.ListaDataNavBarPrin)
         Me.Name = "BADepNotasTransfFrm"
         Me.Text = "Depósitos, Notas, Transferencias"
-<<<<<<< HEAD
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).EndInit()
@@ -355,16 +273,6 @@ Partial Class BADepNotasTransfFrm
         CType(Me.c1cmbTipoTrans, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.c1cmbBanco, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-=======
-        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        CType(Me.c1cmbBanco, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.c1cmbTipoTrans, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BABancosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BATransaccionesListaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
         CType(Me.BAConfBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
