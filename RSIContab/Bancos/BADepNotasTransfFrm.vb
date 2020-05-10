@@ -128,10 +128,6 @@ Public Class BADepNotasTransfFrm
         ListaRegistrosAbiertos.Remove(strNoDocumento)
     End Sub
 
-    Private Sub ListaDataNavBarPrin_Load(sender As Object, e As EventArgs) Handles ListaDataNavBarPrin.Load
-        ''''''
-    End Sub
-
     Private Sub RecargarDatos()
         Me.BATransaccionesEncabezadoTableAdapter.Fill(Me.BATransaccionesListaDataSet.BATransaccionesEncabezado, c1cmbBanco.SelectedValue, intTipoTrans, IntAño, intMes)
         If Me.BATransaccionesListaDataSet.BATransaccionesEncabezado.Rows.Count = 0 Then

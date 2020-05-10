@@ -13,7 +13,7 @@
         Me.MdiParent = MDIPrincipal
         Me.Top = 10
         Me.Left = 10
-        'Codigo
+
         dbCls.DBconStr = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
         Me.BAConfTableAdapter.Connection.ConnectionString = strcnCAD

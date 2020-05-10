@@ -140,30 +140,24 @@
     <Compile Include="Bancos\BAConfFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Bancos\BADepNotasTransEdicionFrm.Designer.vb">
       <DependentUpon>BADepNotasTransEdicionFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Bancos\BADepNotasTransEdicionFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
     <Compile Include="Bancos\BADepNotasTransfFrm.Designer.vb">
       <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Bancos\BADepNotasTransfFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Bancos\BAListaBancosFrm.Designer.vb">
       <DependentUpon>BAListaBancosFrm.vb</DependentUpon>
     </Compile>
     <Compile Include="Bancos\BAListaBancosFrm.vb">
       <SubType>Form</SubType>
     </Compile>
-=======
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
     <Compile Include="Contabilidad\CTAgregarCuentaFrm.designer.vb">
       <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
     </Compile>
@@ -1125,7 +1119,6 @@
     <EmbeddedResource Include="Bancos\BAConfFrm.resx">
       <DependentUpon>BAConfFrm.vb</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Bancos\BADepNotasTransEdicionFrm.resx">
       <DependentUpon>BADepNotasTransEdicionFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -1135,11 +1128,6 @@
     <EmbeddedResource Include="Bancos\BAListaBancosFrm.resx">
       <DependentUpon>BAListaBancosFrm.vb</DependentUpon>
     </EmbeddedResource>
-=======
-    <EmbeddedResource Include="Bancos\BADepNotasTransfFrm.resx">
-      <DependentUpon>BADepNotasTransfFrm.vb</DependentUpon>
-    </EmbeddedResource>
->>>>>>> 2a71dd69fcbaa06972e9097fac2dc9ff47d39454
     <EmbeddedResource Include="Contabilidad\CTAgregarCuentaFrm.resx">
       <DependentUpon>CTAgregarCuentaFrm.vb</DependentUpon>
     </EmbeddedResource>
