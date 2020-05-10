@@ -1,0 +1,10 @@
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Debug\CTClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Debug\CTClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\bin\Debug\CTClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.vbprojResolveAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.Resources.resources
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.vbproj.GenerateResource.Cache
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.vbproj.CoreCompileInputs.cache
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Cont\CTClassLib\obj\Debug\CTClassLib.pdb

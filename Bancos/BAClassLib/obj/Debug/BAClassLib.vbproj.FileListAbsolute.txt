@@ -1,0 +1,10 @@
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Debug\BAClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Debug\BAClassLib.pdb
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\bin\Debug\BAClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.vbprojResolveAssemblyReference.cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.Resources.resources
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.vbproj.GenerateResource.Cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.vbproj.CoreCompileInputs.cache
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.dll
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.xml
+C:\Desarrollo\ContabJJ\Contab\Bancos\BAClassLib\obj\Debug\BAClassLib.pdb
