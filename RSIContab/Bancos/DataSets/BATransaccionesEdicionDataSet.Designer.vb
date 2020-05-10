@@ -4617,9 +4617,9 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [BATransaccionesDetalle] ([CodigoBanco], [TipoDocumento], [NoDocument"& _ 
                 "o], [Fecha], [Cuenta], [Debe], [Haber], [ValorEquivalente], [Año], [Mes], [Descr"& _ 
                 "ipcion]) VALUES (@CodigoBanco, @TipoDocumento, @NoDocumento, @Fecha, @Cuenta, @D"& _ 
-                "ebe, @Haber, @ValorEquivalente, @Año, @Mes, @Descripcion);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBan"& _ 
-                "co, TipoDocumento, NoDocumento, Fecha, Cuenta, Debe, Haber, ValorEquivalente, Añ"& _ 
-                "o, Mes, Descripcion FROM BATransaccionesDetalle WHERE (Id = SCOPE_IDENTITY())"
+                "ebe, @Haber, @ValorEquivalente, @Año, @Mes, @Descripcion);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanc"& _ 
+                "o, TipoDocumento, NoDocumento, Fecha, Cuenta, Debe, Haber, ValorEquivalente, Año"& _ 
+                ", Mes, Descripcion FROM BATransaccionesDetalle WHERE (Id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4645,9 +4645,9 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "inal_Debe) AND ([Haber] = @Original_Haber) AND ([ValorEquivalente] = @Original_V"& _ 
                 "alorEquivalente) AND ([Año] = @Original_Año) AND ([Mes] = @Original_Mes) AND ((@"& _ 
                 "IsNull_Descripcion = 1 AND [Descripcion] IS NULL) OR ([Descripcion] = @Original_"& _ 
-                "Descripcion)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, Cuen"& _ 
-                "ta, Debe, Haber, ValorEquivalente, Año, Mes, Descripcion FROM BATransaccionesDet"& _ 
-                "alle WHERE (Id = @Id)"
+                "Descripcion)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, Cuent"& _ 
+                "a, Debe, Haber, ValorEquivalente, Año, Mes, Descripcion FROM BATransaccionesDeta"& _ 
+                "lle WHERE (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -4692,9 +4692,9 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, Cuenta, Debe, H"& _ 
-                "aber, ValorEquivalente, Año, Mes, Descripcion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesDe"& _ 
-                "talle"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanco = @CodigoBanco) AND (TipoDocumento = @TipoDocum"& _ 
-                "ento) AND (Año = @Año) AND (Mes = @Mes)"
+                "aber, ValorEquivalente, Año, Mes, Descripcion"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesDet"& _ 
+                "alle"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanco = @CodigoBanco) AND (TipoDocumento = @TipoDocumen"& _ 
+                "to) AND (Año = @Año) AND (Mes = @Mes)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5220,13 +5220,13 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "@BancoFuente, @BancoDestino, @NoDocumentoBancoDestino, @PagoProveedor, @CodigoPr"& _ 
                 "oveedor, @FacturaProveedor, @NoRecibo, @Beneficiario, @Monto, @Concepto, @FechaC"& _ 
                 "reacion, @PosFechado, @RegistradoBanco, @Contabilizado, @NoPartida, @Anulado, @C"& _ 
-                "errado, @Impreso, @PosImpresion, @DescripcionTipo, @Usuario, @Año, @Mes);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELEC"& _ 
-                "T Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, FactorCambio, EsTransferen"& _ 
-                "cia, BancoFuente, BancoDestino, NoDocumentoBancoDestino, PagoProveedor, CodigoPr"& _ 
-                "oveedor, FacturaProveedor, NoRecibo, Beneficiario, Monto, Concepto, FechaCreacio"& _ 
-                "n, PosFechado, RegistradoBanco, Contabilizado, NoPartida, Anulado, Cerrado, Impr"& _ 
-                "eso, PosImpresion, DescripcionTipo, Usuario, Año, Mes FROM BATransaccionesEncabe"& _ 
-                "zado WHERE (Id = SCOPE_IDENTITY())"
+                "errado, @Impreso, @PosImpresion, @DescripcionTipo, @Usuario, @Año, @Mes);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT"& _ 
+                " Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, FactorCambio, EsTransferenc"& _ 
+                "ia, BancoFuente, BancoDestino, NoDocumentoBancoDestino, PagoProveedor, CodigoPro"& _ 
+                "veedor, FacturaProveedor, NoRecibo, Beneficiario, Monto, Concepto, FechaCreacion"& _ 
+                ", PosFechado, RegistradoBanco, Contabilizado, NoPartida, Anulado, Cerrado, Impre"& _ 
+                "so, PosImpresion, DescripcionTipo, Usuario, Año, Mes FROM BATransaccionesEncabez"& _ 
+                "ado WHERE (Id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5292,12 +5292,12 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 " @Original_PosImpresion) AND ((@IsNull_DescripcionTipo = 1 AND [DescripcionTipo]"& _ 
                 " IS NULL) OR ([DescripcionTipo] = @Original_DescripcionTipo)) AND ((@IsNull_Usua"& _ 
                 "rio = 1 AND [Usuario] IS NULL) OR ([Usuario] = @Original_Usuario)) AND ([Año] = "& _ 
-                "@Original_Año) AND ([Mes] = @Original_Mes));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, TipoDocume"& _ 
-                "nto, NoDocumento, Fecha, FactorCambio, EsTransferencia, BancoFuente, BancoDestin"& _ 
-                "o, NoDocumentoBancoDestino, PagoProveedor, CodigoProveedor, FacturaProveedor, No"& _ 
-                "Recibo, Beneficiario, Monto, Concepto, FechaCreacion, PosFechado, RegistradoBanc"& _ 
-                "o, Contabilizado, NoPartida, Anulado, Cerrado, Impreso, PosImpresion, Descripcio"& _ 
-                "nTipo, Usuario, Año, Mes FROM BATransaccionesEncabezado WHERE (Id = @Id)"
+                "@Original_Año) AND ([Mes] = @Original_Mes));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, TipoDocumen"& _ 
+                "to, NoDocumento, Fecha, FactorCambio, EsTransferencia, BancoFuente, BancoDestino"& _ 
+                ", NoDocumentoBancoDestino, PagoProveedor, CodigoProveedor, FacturaProveedor, NoR"& _ 
+                "ecibo, Beneficiario, Monto, Concepto, FechaCreacion, PosFechado, RegistradoBanco"& _ 
+                ", Contabilizado, NoPartida, Anulado, Cerrado, Impreso, PosImpresion, Descripcion"& _ 
+                "Tipo, Usuario, Año, Mes FROM BATransaccionesEncabezado WHERE (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -5385,12 +5385,12 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Id, CodigoBanco, TipoDocumento, NoDocumento, Fecha, FactorCambio, E"& _ 
                 "sTransferencia, BancoFuente, BancoDestino, NoDocumentoBancoDestino, PagoProveedo"& _ 
-                "r, CodigoProveedor, FacturaProveedor, NoRecibo, Beneficiario, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"                "& _ 
-                "         Monto, Concepto, FechaCreacion, PosFechado, RegistradoBanco, Contabiliz"& _ 
-                "ado, NoPartida, Anulado, Cerrado, Impreso, PosImpresion, DescripcionTipo, Usuari"& _ 
-                "o, Año, Mes"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesEncabezado"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanc"& _ 
-                "o = @CodigoBanco) AND (TipoDocumento = @TipoDocumento) AND (Año = @Año) AND (Mes"& _ 
-                " = @Mes)"
+                "r, CodigoProveedor, FacturaProveedor, NoRecibo, Beneficiario, "&Global.Microsoft.VisualBasic.ChrW(10)&"                 "& _ 
+                "        Monto, Concepto, FechaCreacion, PosFechado, RegistradoBanco, Contabiliza"& _ 
+                "do, NoPartida, Anulado, Cerrado, Impreso, PosImpresion, DescripcionTipo, Usuario"& _ 
+                ", Año, Mes"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesEncabezado"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanco ="& _ 
+                " @CodigoBanco) AND (TipoDocumento = @TipoDocumento) AND (Año = @Año) AND (Mes = "& _ 
+                "@Mes)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@TipoDocumento", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "TipoDocumento", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6208,11 +6208,11 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "digoMoneda, @FactorCambio, @MontoSobregiro, @CuentaAjuste, @UltimoCheque, @Ultim"& _ 
                 "oDeposito, @UltimaNotaDebito, @UltimaNotaCredito, @UltimaTransferencia, @UltimoP"& _ 
                 "agoEnLinea, @UltimoNoPosImpresion, @Empresa, @FormatoCheque, @ImpresoraCheques);"& _ 
-                ""&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CodigoBanco, DescripcionBanco, CuentaContable, CuentaBancaria, CuentaMo"& _ 
-                "nedaExtranjera, CodigoMoneda, FactorCambio, MontoSobregiro, CuentaAjuste, Ultimo"& _ 
-                "Cheque, UltimoDeposito, UltimaNotaDebito, UltimaNotaCredito, UltimaTransferencia"& _ 
-                ", UltimoPagoEnLinea, UltimoNoPosImpresion, Empresa, FormatoCheque, ImpresoraCheq"& _ 
-                "ues FROM BABancos WHERE (CodigoBanco = @CodigoBanco)"
+                ""&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT CodigoBanco, DescripcionBanco, CuentaContable, CuentaBancaria, CuentaMon"& _ 
+                "edaExtranjera, CodigoMoneda, FactorCambio, MontoSobregiro, CuentaAjuste, UltimoC"& _ 
+                "heque, UltimoDeposito, UltimaNotaDebito, UltimaNotaCredito, UltimaTransferencia,"& _ 
+                " UltimoPagoEnLinea, UltimoNoPosImpresion, Empresa, FormatoCheque, ImpresoraChequ"& _ 
+                "es FROM BABancos WHERE (CodigoBanco = @CodigoBanco)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DescripcionBanco", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DescripcionBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6260,12 +6260,12 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "sNull_Empresa = 1 AND [Empresa] IS NULL) OR ([Empresa] = @Original_Empresa)) AND"& _ 
                 " ((@IsNull_FormatoCheque = 1 AND [FormatoCheque] IS NULL) OR ([FormatoCheque] = "& _ 
                 "@Original_FormatoCheque)) AND ((@IsNull_ImpresoraCheques = 1 AND [ImpresoraChequ"& _ 
-                "es] IS NULL) OR ([ImpresoraCheques] = @Original_ImpresoraCheques)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Cod"& _ 
-                "igoBanco, DescripcionBanco, CuentaContable, CuentaBancaria, CuentaMonedaExtranje"& _ 
-                "ra, CodigoMoneda, FactorCambio, MontoSobregiro, CuentaAjuste, UltimoCheque, Ulti"& _ 
-                "moDeposito, UltimaNotaDebito, UltimaNotaCredito, UltimaTransferencia, UltimoPago"& _ 
-                "EnLinea, UltimoNoPosImpresion, Empresa, FormatoCheque, ImpresoraCheques FROM BAB"& _ 
-                "ancos WHERE (CodigoBanco = @CodigoBanco)"
+                "es] IS NULL) OR ([ImpresoraCheques] = @Original_ImpresoraCheques)));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Codi"& _ 
+                "goBanco, DescripcionBanco, CuentaContable, CuentaBancaria, CuentaMonedaExtranjer"& _ 
+                "a, CodigoMoneda, FactorCambio, MontoSobregiro, CuentaAjuste, UltimoCheque, Ultim"& _ 
+                "oDeposito, UltimaNotaDebito, UltimaNotaCredito, UltimaTransferencia, UltimoPagoE"& _ 
+                "nLinea, UltimoNoPosImpresion, Empresa, FormatoCheque, ImpresoraCheques FROM BABa"& _ 
+                "ncos WHERE (CodigoBanco = @CodigoBanco)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@DescripcionBanco", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "DescripcionBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6328,10 +6328,10 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        CodigoBanco, DescripcionBanco, CuentaContable, CuentaBancaria, Cuen"& _ 
                 "taMonedaExtranjera, CodigoMoneda, FactorCambio, MontoSobregiro, CuentaAjuste, Ul"& _ 
-                "timoCheque, UltimoDeposito, UltimaNotaDebito, UltimaNotaCredito, "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"             "& _ 
-                "            UltimaTransferencia, UltimoPagoEnLinea, UltimoNoPosImpresion, Empres"& _ 
-                "a, FormatoCheque, ImpresoraCheques"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BABancos"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (Codi"& _ 
-                "goBanco = @CodigoBanco)"
+                "timoCheque, UltimoDeposito, UltimaNotaDebito, UltimaNotaCredito, "&Global.Microsoft.VisualBasic.ChrW(10)&"              "& _ 
+                "           UltimaTransferencia, UltimoPagoEnLinea, UltimoNoPosImpresion, Empresa"& _ 
+                ", FormatoCheque, ImpresoraCheques"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BABancos"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoB"& _ 
+                "anco = @CodigoBanco)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
@@ -6960,10 +6960,10 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "reditoEquivalente]) VALUES (@CodigoBanco, @Año, @Mes, @SaldoAnterior, @Cheques, "& _ 
                 "@Depositos, @NotasDebito, @NotasCredito, @SaldoAnteriorEquivalente, @ChequesEqui"& _ 
                 "valente, @DepositosEquivalente, @NotasDebitoEquivalente, @NotasCreditoEquivalent"& _ 
-                "e);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, Año, Mes, SaldoAnterior, Cheques, Depositos, NotasD"& _ 
-                "ebito, NotasCredito, SaldoAnteriorEquivalente, ChequesEquivalente, DepositosEqui"& _ 
-                "valente, NotasDebitoEquivalente, NotasCreditoEquivalente FROM BASaldosMensuales "& _ 
-                "WHERE (Id = SCOPE_IDENTITY())"
+                "e);"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, Año, Mes, SaldoAnterior, Cheques, Depositos, NotasDe"& _ 
+                "bito, NotasCredito, SaldoAnteriorEquivalente, ChequesEquivalente, DepositosEquiv"& _ 
+                "alente, NotasDebitoEquivalente, NotasCreditoEquivalente FROM BASaldosMensuales W"& _ 
+                "HERE (Id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Año", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Año", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -6994,10 +6994,10 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "eriorEquivalente) AND ([ChequesEquivalente] = @Original_ChequesEquivalente) AND "& _ 
                 "([DepositosEquivalente] = @Original_DepositosEquivalente) AND ([NotasDebitoEquiv"& _ 
                 "alente] = @Original_NotasDebitoEquivalente) AND ([NotasCreditoEquivalente] = @Or"& _ 
-                "iginal_NotasCreditoEquivalente));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, Año, Mes, SaldoAnteri"& _ 
-                "or, Cheques, Depositos, NotasDebito, NotasCredito, SaldoAnteriorEquivalente, Che"& _ 
-                "quesEquivalente, DepositosEquivalente, NotasDebitoEquivalente, NotasCreditoEquiv"& _ 
-                "alente FROM BASaldosMensuales WHERE (Id = @Id)"
+                "iginal_NotasCreditoEquivalente));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, CodigoBanco, Año, Mes, SaldoAnterio"& _ 
+                "r, Cheques, Depositos, NotasDebito, NotasCredito, SaldoAnteriorEquivalente, Cheq"& _ 
+                "uesEquivalente, DepositosEquivalente, NotasDebitoEquivalente, NotasCreditoEquiva"& _ 
+                "lente FROM BASaldosMensuales WHERE (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Año", Global.System.Data.SqlDbType.SmallInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Año", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7044,9 +7044,9 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        Id, CodigoBanco, Año, Mes, SaldoAnterior, Cheques, Depositos, Notas"& _ 
                 "Debito, NotasCredito, SaldoAnteriorEquivalente, ChequesEquivalente, DepositosEqu"& _ 
-                "ivalente, NotasDebitoEquivalente, NotasCreditoEquivalente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BASal"& _ 
-                "dosMensuales"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanco = @CodigoBanco) AND (Año = @Año) AND (Me"& _ 
-                "s = @Mes)"
+                "ivalente, NotasDebitoEquivalente, NotasCreditoEquivalente"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BASald"& _ 
+                "osMensuales"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (CodigoBanco = @CodigoBanco) AND (Año = @Año) AND (Mes "& _ 
+                "= @Mes)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CodigoBanco", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "CodigoBanco", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Año", Global.System.Data.SqlDbType.SmallInt, 2, Global.System.Data.ParameterDirection.Input, 0, 0, "Año", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7445,10 +7445,10 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [BATransaccionesDocumentacion] ([IDTransEnc], [NoTransaccion], [Fecha"& _ 
                 "], [Usuario], [Comentario], [Documento], [NombreDocumento]) VALUES (@IDTransEnc,"& _ 
-                " @NoTransaccion, @Fecha, @Usuario, @Comentario, @Documento, @NombreDocumento);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "SELECT IDTransEnc, Id, NoTransaccion, Fecha, Usuario, Comentario, Documento, Nom"& _ 
-                "breDocumento FROM BATransaccionesDocumentacion WHERE (IDTransEnc = @IDTransEnc) "& _ 
-                "AND (Id = SCOPE_IDENTITY())"
+                " @NoTransaccion, @Fecha, @Usuario, @Comentario, @Documento, @NombreDocumento);"&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
+                "ELECT IDTransEnc, Id, NoTransaccion, Fecha, Usuario, Comentario, Documento, Nomb"& _ 
+                "reDocumento FROM BATransaccionesDocumentacion WHERE (IDTransEnc = @IDTransEnc) A"& _ 
+                "ND (Id = SCOPE_IDENTITY())"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IDTransEnc", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IDTransEnc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NoTransaccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NoTransaccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7465,9 +7465,9 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
                 "(([IDTransEnc] = @Original_IDTransEnc) AND ([Id] = @Original_Id) AND ([NoTransac"& _ 
                 "cion] = @Original_NoTransaccion) AND ([Fecha] = @Original_Fecha) AND ([Usuario] "& _ 
                 "= @Original_Usuario) AND ([Comentario] = @Original_Comentario) AND ([NombreDocum"& _ 
-                "ento] = @Original_NombreDocumento));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IDTransEnc, Id, NoTransaccion, Fech"& _ 
-                "a, Usuario, Comentario, Documento, NombreDocumento FROM BATransaccionesDocumenta"& _ 
-                "cion WHERE (IDTransEnc = @IDTransEnc) AND (Id = @Id)"
+                "ento] = @Original_NombreDocumento));"&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT IDTransEnc, Id, NoTransaccion, Fecha"& _ 
+                ", Usuario, Comentario, Documento, NombreDocumento FROM BATransaccionesDocumentac"& _ 
+                "ion WHERE (IDTransEnc = @IDTransEnc) AND (Id = @Id)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IDTransEnc", Global.System.Data.SqlDbType.BigInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "IDTransEnc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@NoTransaccion", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "NoTransaccion", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -7500,8 +7500,8 @@ Namespace BATransaccionesEdicionDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT        IDTransEnc, Id, NoTransaccion, Fecha, Usuario, Comentario, Document"& _ 
-                "o, NombreDocumento"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesDocumentacion"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        ("& _ 
-                "IDTransEnc = @IDTransEnc)"
+                "o, NombreDocumento"&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            BATransaccionesDocumentacion"&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (ID"& _ 
+                "TransEnc = @IDTransEnc)"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IDTransEnc", Global.System.Data.SqlDbType.BigInt, 8, Global.System.Data.ParameterDirection.Input, 0, 0, "IDTransEnc", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
