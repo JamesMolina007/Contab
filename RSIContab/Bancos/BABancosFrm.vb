@@ -10,11 +10,20 @@
 
     Private Sub BABancosFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BABancosListaDataSet.BAConf' Puede moverla o quitarla según sea necesario.
+<<<<<<< HEAD
         Me.BAConfTableAdapter.Fill(Me.BABancosListaDataSet.BAConf)
+=======
+        Me.MdiParent = MDIPrincipal
+>>>>>>> 5de6180fc6d1570d241a6d5fadd75ecee9f5649e
         Me.Top = 10
+        Me.Left = 10
+
         dbCls.DBconStr = strcnCAD
         Me.BABancosTableAdapter.Connection.ConnectionString = strcnCAD
+        Me.BAConfTableAdapter.Connection.ConnectionString = strcnCAD
+        Me.BAConfTableAdapter.Fill(Me.BABancosListaDataSet.BAConf)
         Me.BABancosTableAdapter.Fill(Me.BABancosListaDataSet.BABancos)
+
         ListaDataNavBarPrin.ToolStripLabelBuscar.Text = "Buscar Directamente por Identidad:"
         ListaDataNavBarPrin.ToolStripLabelBuscar.Text = ""
         ListaDataNavBarPrin.ToolStripLabelNoRegistros.Text = PrincipalBindingSource.Count
@@ -53,22 +62,23 @@
 
     Private Sub CargarForma(strModalidad As String)
         If strModalidad = "NUEVO" Then
+            MsgBox("Entro en NUEVO")
             Dim EditFormaFrm As New BABancosEdicionFrm
             EditFormaFrm.FormularioPrincipal = Me
             EditFormaFrm.MdiParent = Me.MdiParent
             EditFormaFrm.Modalidad = strModalidad
             EditFormaFrm.Show()
         Else
-            If ListaDataNavBarPrin.ToolStripLabelBuscar.Text.Length > 0 Then
-                If dbCls.ExisteBanco(ListaDataNavBarPrin.ToolStripLabelBuscar.Text) Then
-                    If Not ListaRegistrosAbiertos.Contains(ListaDataNavBarPrin.ToolStripLabelBuscar.Text) Then
+            If ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text.Length > 0 Then
+                If dbCls.ExisteBanco(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text) Then
+                    If Not ListaRegistrosAbiertos.Contains(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text) Then
                         Dim EditFormaFrm As New BABancosEdicionFrm
                         EditFormaFrm.FormularioPrincipal = Me
                         EditFormaFrm.MdiParent = Me.MdiParent
                         EditFormaFrm.Modalidad = strModalidad
-                        EditFormaFrm.intBanco = ListaDataNavBarPrin.ToolStripLabelBuscar.Text
-                        ListaRegistrosAbiertos.Add(ListaDataNavBarPrin.ToolStripLabelBuscar.Text, ListaDataNavBarPrin.ToolStripLabelBuscar.Text)
-                        ListaDataNavBarPrin.ToolStripLabelBuscar.Text = ""
+                        EditFormaFrm.intBanco = ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text
+                        ListaRegistrosAbiertos.Add(ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text, ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text)
+                        ListaDataNavBarPrin.ToolStripTextBoxBuscar.Text = ""
                         EditFormaFrm.Show()
                     End If
                 Else
@@ -76,7 +86,7 @@
                 End If
             Else
                 Dim reg As DataRowView = PrincipalBindingSource.Current
-                If Not ListaRegistrosAbiertos.Contains(reg("Identidad")) Then
+                If Not ListaRegistrosAbiertos.Contains(reg("CodigoBanco")) Then
                     Dim EditFormaFrm As New BABancosEdicionFrm
                     EditFormaFrm.FormularioPrincipal = Me
                     EditFormaFrm.MdiParent = Me.MdiParent
@@ -89,6 +99,10 @@
         End If
     End Sub
 
+    Public Sub EliminarRegistroAbierto(strBanco As String)
+        ListaRegistrosAbiertos.Remove(strBanco)
+    End Sub
+
     Private Sub RecargarDatos()
         Me.BABancosTableAdapter.Fill(Me.BABancosListaDataSet.BABancos)
         If Me.BABancosListaDataSet.BABancos.Rows.Count = 0 Then
@@ -98,7 +112,5 @@
         End If
     End Sub
 
-    Private Sub ListaDataNavBarPrin_Load(sender As Object, e As EventArgs) Handles ListaDataNavBarPrin.Load
 
-    End Sub
 End Class

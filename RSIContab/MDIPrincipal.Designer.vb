@@ -135,6 +135,7 @@ Partial Class MDIPrincipal
         Me.statuslblUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectPrincipal = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.PruebaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuPrincipal.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -399,7 +400,7 @@ Partial Class MDIPrincipal
         '
         'BancosToolStripMenuItem
         '
-        Me.BancosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfiguraciónDeBancosToolStripMenuItem, Me.MantenimientoDeCuentasDeBancosToolStripMenuItem})
+        Me.BancosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ConfiguraciónDeBancosToolStripMenuItem, Me.MantenimientoDeCuentasDeBancosToolStripMenuItem, Me.PruebaToolStripMenuItem})
         Me.BancosToolStripMenuItem.Name = "BancosToolStripMenuItem"
         Me.BancosToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.BancosToolStripMenuItem.Text = "Bancos"
@@ -841,6 +842,12 @@ Partial Class MDIPrincipal
         Me.RectPrincipal.Name = "RectangleShape1"
         Me.RectPrincipal.Size = New System.Drawing.Size(571, 380)
         '
+        'PruebaToolStripMenuItem
+        '
+        Me.PruebaToolStripMenuItem.Name = "PruebaToolStripMenuItem"
+        Me.PruebaToolStripMenuItem.Size = New System.Drawing.Size(275, 22)
+        Me.PruebaToolStripMenuItem.Text = "Prueba"
+        '
         'MDIPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -974,4 +981,5 @@ Partial Class MDIPrincipal
     Friend WithEvents EjecuciónAnualToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConfiguraciónDeBancosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MantenimientoDeCuentasDeBancosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PruebaToolStripMenuItem As ToolStripMenuItem
 End Class

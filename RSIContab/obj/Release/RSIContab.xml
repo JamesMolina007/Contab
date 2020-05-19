@@ -32,7 +32,37 @@ RSIContab
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:RSIContab.My.Resources.Resources._1393113806_Doc_single">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1393292018_gear_48">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1393538728_Zoom">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1393538785_Zoom">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:RSIContab.My.Resources.Resources._1393538844_tick_16">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1393538860_tick_32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1393538975_tick_48">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -73,6 +103,11 @@ RSIContab
 </summary>
 </member>
 <member name="P:RSIContab.My.Resources.Resources._1393662113_cancel">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RSIContab.My.Resources.Resources._1421198824_gear_32">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
@@ -1562,17 +1597,12 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesEncabezadoDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BAConfDataTable">
+<member name="T:RSIContab.BABancosEdicionDataSet.CTCatalogoCuentasDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -1582,12 +1612,12 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BABancosRow">
+<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleDataTable">
 <summary>
-Represents strongly named DataRow class.
+Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleRow">
+<member name="T:RSIContab.BABancosEdicionDataSet.BABancosRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1597,7 +1627,7 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BAConfRow">
+<member name="T:RSIContab.BABancosEdicionDataSet.CTCatalogoCuentasRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1607,12 +1637,12 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BABancosRowChangeEvent">
+<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleRow">
 <summary>
-Row event argument class
+Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleRowChangeEvent">
+<member name="T:RSIContab.BABancosEdicionDataSet.BABancosRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -1622,7 +1652,7 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSet.BAConfRowChangeEvent">
+<member name="T:RSIContab.BABancosEdicionDataSet.CTCatalogoCuentasRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -1632,12 +1662,12 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BABancosTableAdapter">
+<member name="T:RSIContab.BABancosEdicionDataSet.BATransaccionesDetalleRowChangeEvent">
 <summary>
-Represents the connection and commands used to retrieve and save data.
+Row event argument class
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter">
+<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BABancosTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -1647,12 +1677,17 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BAConfTableAdapter">
+<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.CTCatalogoCuentasTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BABancosEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -1707,7 +1742,17 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:RSIContab.BABancosListaDataSet.BAConfDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:RSIContab.BABancosListaDataSet.BABancosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BABancosListaDataSet.BAConfRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1717,7 +1762,17 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:RSIContab.BABancosListaDataSet.BAConfRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:RSIContab.BABancosListaDataSetTableAdapters.BABancosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BABancosListaDataSetTableAdapters.BAConfTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -1842,12 +1897,42 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BABancosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BASaldosMensualesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesDocumentacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesDetalleRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesEncabezadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BABancosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BASaldosMensualesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesDocumentacionRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1862,12 +1947,42 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BABancosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BASaldosMensualesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSet.BATransaccionesDocumentacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDetalleTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BABancosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BASaldosMensualesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesEdicionDataSetTableAdapters.BATransaccionesDocumentacionTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -1922,7 +2037,27 @@ Represents a strongly typed in-memory cache of data.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BABancosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BAConfDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesListaDataSet.BATransaccionesEncabezadoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BABancosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BAConfRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -1932,7 +2067,27 @@ Represents strongly named DataRow class.
 Row event argument class
 </summary>
 </member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BABancosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSet.BAConfRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:RSIContab.BATransaccionesListaDataSetTableAdapters.BATransaccionesEncabezadoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSetTableAdapters.BABancosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RSIContab.BATransaccionesListaDataSetTableAdapters.BAConfTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

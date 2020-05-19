@@ -26,7 +26,7 @@ Partial Class ListaDataNavBar
         Me.ToolStripButtonEditar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonConsultar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonRecargar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButtonEliminar = New System.Windows.Forms.ToolStripButton()
+        '  Me.ToolStripButtonEliminar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButtonSalir = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripLabelBuscar = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripTextBoxBuscar = New System.Windows.Forms.ToolStripTextBox()
@@ -81,14 +81,14 @@ Partial Class ListaDataNavBar
         '
         'ToolStripButtonEliminar
         '
-        Me.ToolStripButtonEliminar.Image = Global.RSIContab.My.Resources.Resources._1393551525_DeleteRed
-        Me.ToolStripButtonEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButtonEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButtonEliminar.Name = "ToolStripButtonEliminar"
-        Me.ToolStripButtonEliminar.Size = New System.Drawing.Size(54, 56)
-        Me.ToolStripButtonEliminar.Text = "Eliminar"
-        Me.ToolStripButtonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
+        'Me.ToolStripButtonEliminar.Image = Global.RSIContab.My.Resources.Resources._1393551525_DeleteRed
+        'Me.ToolStripButtonEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        'Me.ToolStripButtonEliminar.ImageTransparentColor = System.Drawing.Color.Magenta
+        'Me.ToolStripButtonEliminar.Name = "ToolStripButtonEliminar"
+        'Me.ToolStripButtonEliminar.Size = New System.Drawing.Size(54, 56)
+        'Me.ToolStripButtonEliminar.Text = "Eliminar"
+        'Me.ToolStripButtonEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        ''
         'ToolStripButtonSalir
         '
         Me.ToolStripButtonSalir.Image = Global.RSIContab.My.Resources.Resources._1393551019_Log_Out
@@ -113,7 +113,8 @@ Partial Class ListaDataNavBar
         'ToolStripBotones
         '
         Me.ToolStripBotones.AutoSize = False
-        Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonNuevo, Me.ToolStripButtonEditar, Me.ToolStripButtonConsultar, Me.ToolStripButtonRecargar, Me.ToolStripButtonEliminar, Me.ToolStripButtonSalir, Me.ToolStripSeparator1, Me.ToolStripLabelBuscar, Me.ToolStripTextBoxBuscar, Me.ToolStripSeparator2, Me.ToolStripLabelRegs, Me.ToolStripLabelNoRegistros})
+        Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonNuevo, Me.ToolStripButtonEditar, Me.ToolStripButtonConsultar, Me.ToolStripButtonRecargar, Me.ToolStripButtonSalir, Me.ToolStripSeparator1, Me.ToolStripLabelBuscar, Me.ToolStripTextBoxBuscar, Me.ToolStripSeparator2, Me.ToolStripLabelRegs, Me.ToolStripLabelNoRegistros})
+        'Me.ToolStripBotones.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonNuevo, Me.ToolStripButtonEditar, Me.ToolStripButtonConsultar, Me.ToolStripButtonRecargar, Me.ToolStripButtonEliminar, Me.ToolStripButtonSalir, Me.ToolStripSeparator1, Me.ToolStripLabelBuscar, Me.ToolStripTextBoxBuscar, Me.ToolStripSeparator2, Me.ToolStripLabelRegs, Me.ToolStripLabelNoRegistros})
         Me.ToolStripBotones.Location = New System.Drawing.Point(0, 0)
         Me.ToolStripBotones.Name = "ToolStripBotones"
         Me.ToolStripBotones.Size = New System.Drawing.Size(674, 59)
@@ -159,7 +160,7 @@ Partial Class ListaDataNavBar
     Friend WithEvents ToolStripButtonEditar As ToolStripButton
     Friend WithEvents ToolStripButtonConsultar As ToolStripButton
     Friend WithEvents ToolStripButtonRecargar As ToolStripButton
-    Friend WithEvents ToolStripButtonEliminar As ToolStripButton
+    ' Friend WithEvents ToolStripButtonEliminar As ToolStripButton
     Friend WithEvents ToolStripButtonSalir As ToolStripButton
     Friend WithEvents ToolStripLabelBuscar As ToolStripLabel
     Friend WithEvents ToolStripTextBoxBuscar As ToolStripTextBox

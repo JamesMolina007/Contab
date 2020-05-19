@@ -301,4 +301,25 @@
   <data name="_1421885829_filter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1421885829_filter.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_1393113806_Doc_single" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393113806_Doc_single.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1393292018_gear_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393292018_gear_48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1393538728_Zoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393538728_Zoom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1393538785_Zoom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393538785_Zoom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1393538860_tick_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393538860_tick_32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1393538975_tick_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1393538975_tick_48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1421198824_gear_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1421198824_gear_32.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
