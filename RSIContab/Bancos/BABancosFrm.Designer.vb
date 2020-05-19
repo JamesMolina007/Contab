@@ -24,25 +24,18 @@ Partial Class BABancosFrm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(BABancosFrm))
+        Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
+        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
         Me.PrincipalBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BABancosListaDataSet = New RSIContab.BABancosListaDataSet()
-        Me.c1dbgrdNiveles = New C1.Win.C1TrueDBGrid.C1TrueDBGrid()
         Me.BABancosTableAdapter = New RSIContab.BABancosListaDataSetTableAdapters.BABancosTableAdapter()
-        Me.ListaDataNavBarPrin = New RSIContab.ListaDataNavBar()
+        Me.BindingSourceConfiguracion = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BAConfTableAdapter = New RSIContab.BABancosListaDataSetTableAdapters.BAConfTableAdapter()
+        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BABancosListaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BindingSourceConfiguracion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PrincipalBindingSource
-        '
-        Me.PrincipalBindingSource.DataMember = "BABancos"
-        Me.PrincipalBindingSource.DataSource = Me.BABancosListaDataSet
-        '
-        'BABancosListaDataSet
-        '
-        Me.BABancosListaDataSet.DataSetName = "BABancosListaDataSet"
-        Me.BABancosListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'c1dbgrdNiveles
         '
@@ -69,10 +62,6 @@ Partial Class BABancosFrm
         Me.c1dbgrdNiveles.UseCompatibleTextRendering = False
         Me.c1dbgrdNiveles.PropBag = resources.GetString("c1dbgrdNiveles.PropBag")
         '
-        'BABancosTableAdapter
-        '
-        Me.BABancosTableAdapter.ClearBeforeFill = True
-        '
         'ListaDataNavBarPrin
         '
         Me.ListaDataNavBarPrin.BindingSourcePrincipal = Me.PrincipalBindingSource
@@ -81,6 +70,29 @@ Partial Class BABancosFrm
         Me.ListaDataNavBarPrin.Name = "ListaDataNavBarPrin"
         Me.ListaDataNavBarPrin.Size = New System.Drawing.Size(948, 69)
         Me.ListaDataNavBarPrin.TabIndex = 5
+        '
+        'PrincipalBindingSource
+        '
+        Me.PrincipalBindingSource.DataMember = "BABancos"
+        Me.PrincipalBindingSource.DataSource = Me.BABancosListaDataSet
+        '
+        'BABancosListaDataSet
+        '
+        Me.BABancosListaDataSet.DataSetName = "BABancosListaDataSet"
+        Me.BABancosListaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'BABancosTableAdapter
+        '
+        Me.BABancosTableAdapter.ClearBeforeFill = True
+        '
+        'BindingSourceConfiguracion
+        '
+        Me.BindingSourceConfiguracion.DataMember = "BAConf"
+        Me.BindingSourceConfiguracion.DataSource = Me.BABancosListaDataSet
+        '
+        'BAConfTableAdapter
+        '
+        Me.BAConfTableAdapter.ClearBeforeFill = True
         '
         'BABancosFrm
         '
@@ -91,9 +103,10 @@ Partial Class BABancosFrm
         Me.Controls.Add(Me.c1dbgrdNiveles)
         Me.Name = "BABancosFrm"
         Me.Text = "BABancosFrm"
+        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PrincipalBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BABancosListaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.c1dbgrdNiveles, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BindingSourceConfiguracion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -103,4 +116,6 @@ Partial Class BABancosFrm
     Friend WithEvents c1dbgrdNiveles As C1.Win.C1TrueDBGrid.C1TrueDBGrid
     Friend WithEvents BABancosTableAdapter As BABancosListaDataSetTableAdapters.BABancosTableAdapter
     Friend WithEvents ListaDataNavBarPrin As ListaDataNavBar
+    Friend WithEvents BindingSourceConfiguracion As BindingSource
+    Friend WithEvents BAConfTableAdapter As BABancosListaDataSetTableAdapters.BAConfTableAdapter
 End Class
